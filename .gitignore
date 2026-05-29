@@ -1,0 +1,25 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Variables de entorno
+.env
+
+# Firebase
+firebase-credentials.json
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Cache
+.pytest_cache/
+
+# Build
+dist/
+
+# Scripts locales
+test_db.py
