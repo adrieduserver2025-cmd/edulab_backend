@@ -1,8 +1,8 @@
 import datetime
 from typing import List, Optional
-from sqlalchemy import String, Boolean, DateTime, Date, Text, Integer, func
+from sqlalchemy import String, Boolean, DateTime, Date, Text, Integer, func, JSON
 from sqlalchemy.orm import Mapped, mapped_column, relationship
-from app.database.base_class import Base
+from app.database.base import Base
 
 class Program(Base):
     __tablename__ = "programs"
@@ -23,8 +23,25 @@ class Program(Base):
         DateTime(timezone=True), server_default=func.now(), onupdate=func.now(), nullable=False
     )
 
+    # Rich Details Fields
+    slug: Mapped[Optional[str]] = mapped_column(String(255), unique=True, index=True)
+    organization_name: Mapped[Optional[str]] = mapped_column(String(255))
+    status: Mapped[Optional[str]] = mapped_column(String(50), default="open")  # open, closed
+    short_description: Mapped[Optional[str]] = mapped_column(Text)
+    activities: Mapped[Optional[list]] = mapped_column(JSON)
+    requirements: Mapped[Optional[list]] = mapped_column(JSON)
+    benefits_json: Mapped[Optional[list]] = mapped_column(JSON)
+    dates_info: Mapped[Optional[str]] = mapped_column(String(255))
+    support_ai: Mapped[Optional[list]] = mapped_column(JSON)
+    facebook_url: Mapped[Optional[str]] = mapped_column(String(500))
+    instagram_url: Mapped[Optional[str]] = mapped_column(String(500))
+    youtube_url: Mapped[Optional[str]] = mapped_column(String(500))
+    video_url: Mapped[Optional[str]] = mapped_column(String(500))
+    image_url: Mapped[Optional[str]] = mapped_column(String(500))
+    is_demo: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
+
     # Relationships
     applications: Mapped[List["Application"]] = relationship("Application", back_populates="program")
 
     def __repr__(self) -> str:
-        return f"<Program {self.title} ({self.type})>"
+        return f"<Program {self.title} ({self.type}) slug={self.slug}>"

@@ -35,6 +35,8 @@ class StudentProfile(Base):
 
     # Relationships
     user = relationship("User", back_populates="student_profile")
+    applications = relationship("Application", back_populates="student_profile", cascade="all, delete-orphan")
+    documents = relationship("Document", back_populates="student_profile", cascade="all, delete-orphan")
 
     def __repr__(self) -> str:
         return f"<StudentProfile id={self.id} user_id={self.user_id} country={self.country}>"
