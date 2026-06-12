@@ -50,7 +50,7 @@ async def get_my_applications(
         for a, p in rows
     ]
 
-from typing import Dict, Any
+from typing import Dict, Any, Optional
 
 class ApplicationCreate(BaseModel):
     program_id: int
