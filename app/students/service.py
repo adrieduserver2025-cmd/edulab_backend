@@ -74,6 +74,10 @@ async def create_profile(db: AsyncSession, profile_in: StudentProfileCreate, use
         portfolio_url=profile_in.portfolio_url,
         bio=profile_in.bio,
         cv_url=profile_in.cv_url,
+        expected_graduation_date=profile_in.expected_graduation_date,
+        work_experience=profile_in.work_experience,
+        volunteer_experience=profile_in.volunteer_experience,
+        general_motivation_letter=profile_in.general_motivation_letter,
         profile_completion=completion
     )
     

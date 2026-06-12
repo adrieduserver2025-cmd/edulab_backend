@@ -13,8 +13,9 @@ from app.database.session import engine
 from app.users.models import User
 from app.students.models import StudentProfile
 from app.programs.models import Program
-from app.applications.models import Application
+from app.applications.models import Application, ApplicationStatusHistory
 from app.documents.models import Document
+from app.organizations.models import Organization
 
 # Setup Logging
 logging.basicConfig(level=logging.INFO)

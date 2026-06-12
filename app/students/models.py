@@ -24,6 +24,10 @@ class StudentProfile(Base):
     portfolio_url = Column(String(255), nullable=True)
     bio = Column(Text, nullable=True)
     cv_url = Column(String(500), nullable=True)
+    expected_graduation_date = Column(Date, nullable=True)
+    work_experience = Column(JSON, nullable=True)
+    volunteer_experience = Column(JSON, nullable=True)
+    general_motivation_letter = Column(Text, nullable=True)
     profile_completion = Column(Integer, default=0, nullable=False)
     created_at = Column(DateTime(timezone=True), server_default=func.now(), nullable=False)
     updated_at = Column(

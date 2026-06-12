@@ -2,7 +2,7 @@ import datetime
 from typing import Optional, Literal
 from pydantic import BaseModel, EmailStr, ConfigDict
 
-RoleType = Literal["student", "admin", "mentor", "reviewer", "organization"]
+RoleType = Literal["student", "admin", "mentor", "reviewer", "organization", "organization_pending"]
 OriginType = Literal["external_user", "eduserver_student"]
 
 class UserBase(BaseModel):

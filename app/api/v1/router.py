@@ -6,6 +6,7 @@ from app.programs.router import router as programs_router
 from app.opportunities.router import router as opportunities_router
 from app.applications.router import router as applications_router
 from app.documents.router import router as documents_router
+from app.organizations.router import router as organizations_router, admin_router as admin_organizations_router
 
 router = APIRouter()
 
@@ -17,3 +18,5 @@ router.include_router(programs_router)
 router.include_router(opportunities_router)
 router.include_router(applications_router)
 router.include_router(documents_router)
+router.include_router(organizations_router)
+router.include_router(admin_organizations_router)

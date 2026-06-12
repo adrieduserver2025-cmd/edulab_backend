@@ -25,8 +25,8 @@ async def get_current_user(
     # Development Mock Bypass - ONLY allowed if MOCK_FIREBASE_AUTH is explicitly True
     if settings.MOCK_FIREBASE_AUTH and (token.startswith("mock-") or not settings.FIREBASE_CREDENTIALS_PATH):
         role = "student"
-        uid = "mock-student-uid"
-        email = "student@edulab.com"
+        uid = token
+        email = f"{token}@edulab.com"
 
         if "admin" in token:
             role = "admin"
@@ -36,6 +36,12 @@ async def get_current_user(
             role = "reviewer"
             uid = "mock-reviewer-uid"
             email = "reviewer@edulab.com"
+        elif "organization_pending" in token:
+            role = "organization_pending"
+            email = "org_pending@edulab.com"
+        elif "organization" in token:
+            role = "organization"
+            email = "org@edulab.com"
 
         logger.debug(f"🔑 MOCK_FIREBASE_AUTH: Mock authentication bypass. User: {email} ({role})")
         
@@ -49,6 +55,35 @@ async def get_current_user(
                     role=role
                 )
             )
+
+        if local_user.status != "active":
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail="User account is deactivated."
+            )
+
+        if local_user.role == "organization_pending":
+            from app.organizations.models import Organization
+            from sqlalchemy import select
+            org_res = await db.execute(select(Organization).where(Organization.user_id == local_user.id))
+            org = org_res.scalars().first()
+            if org:
+                if org.status == "PENDING":
+                    raise HTTPException(
+                        status_code=status.HTTP_403_FORBIDDEN,
+                        detail="Tu organización aún está en revisión. Te notificaremos por correo cuando sea aprobada."
+                    )
+                elif org.status == "REJECTED":
+                    raise HTTPException(
+                        status_code=status.HTTP_403_FORBIDDEN,
+                        detail="Tu solicitud de organización ha sido rechazada."
+                    )
+            else:
+                raise HTTPException(
+                    status_code=status.HTTP_403_FORBIDDEN,
+                    detail="Tu organización aún está en revisión. Te notificaremos por correo cuando sea aprobada."
+                )
+
         return local_user
 
     try:
@@ -85,6 +120,28 @@ async def get_current_user(
                 status_code=status.HTTP_403_FORBIDDEN,
                 detail="User account is deactivated."
             )
+
+        if local_user.role == "organization_pending":
+            from app.organizations.models import Organization
+            from sqlalchemy import select
+            org_res = await db.execute(select(Organization).where(Organization.user_id == local_user.id))
+            org = org_res.scalars().first()
+            if org:
+                if org.status == "PENDING":
+                    raise HTTPException(
+                        status_code=status.HTTP_403_FORBIDDEN,
+                        detail="Tu organización aún está en revisión. Te notificaremos por correo cuando sea aprobada."
+                    )
+                elif org.status == "REJECTED":
+                    raise HTTPException(
+                        status_code=status.HTTP_403_FORBIDDEN,
+                        detail="Tu solicitud de organización ha sido rechazada."
+                    )
+            else:
+                raise HTTPException(
+                    status_code=status.HTTP_403_FORBIDDEN,
+                    detail="Tu organización aún está en revisión. Te notificaremos por correo cuando sea aprobada."
+                )
 
         return local_user
 

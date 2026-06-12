@@ -20,6 +20,10 @@ class StudentProfileBase(BaseModel):
     portfolio_url: Optional[str] = Field(None, description="Portfolio or personal website URL")
     bio: Optional[str] = Field(None, description="Short bio")
     cv_url: Optional[str] = Field(None, description="Link to uploaded curriculum vitae document")
+    expected_graduation_date: Optional[date] = Field(None, description="Expected graduation date (YYYY-MM-DD)")
+    work_experience: Optional[List[dict]] = Field(default=None, description="List of work experience items")
+    volunteer_experience: Optional[List[dict]] = Field(default=None, description="List of volunteer experience items")
+    general_motivation_letter: Optional[str] = Field(None, description="General motivation letter text")
 
 class StudentProfileCreate(StudentProfileBase):
     pass
@@ -41,6 +45,10 @@ class StudentProfileUpdate(BaseModel):
     portfolio_url: Optional[str] = None
     bio: Optional[str] = None
     cv_url: Optional[str] = None
+    expected_graduation_date: Optional[date] = None
+    work_experience: Optional[List[dict]] = None
+    volunteer_experience: Optional[List[dict]] = None
+    general_motivation_letter: Optional[str] = None
 
 class StudentProfile(StudentProfileBase):
     model_config = ConfigDict(from_attributes=True)

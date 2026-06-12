@@ -7,6 +7,10 @@ from app.database.session import engine
 # Import all models to ensure SQLAlchemy binds them for drop/create
 from app.users.models import User
 from app.students.models import StudentProfile
+from app.organizations.models import Organization
+from app.programs.models import Program
+from app.applications.models import Application, ApplicationStatusHistory
+from app.documents.models import Document
 
 async def reset_database():
     print("WARNING: This will drop all tables in your development database!")

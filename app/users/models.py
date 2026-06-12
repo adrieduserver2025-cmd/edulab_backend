@@ -28,5 +28,10 @@ class User(Base):
         "StudentProfile", back_populates="user", uselist=False, cascade="all, delete-orphan"
     )
 
+    # Relationship to organization profile (1-to-1)
+    organization = relationship(
+        "Organization", back_populates="user", uselist=False, cascade="all, delete-orphan", foreign_keys="[Organization.user_id]"
+    )
+
     def __repr__(self) -> str:
         return f"<User {self.email} ({self.role})>"

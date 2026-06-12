@@ -1,6 +1,6 @@
 import datetime
 from typing import List, Optional
-from sqlalchemy import String, Boolean, DateTime, Date, Text, Integer, func, JSON
+from sqlalchemy import String, Boolean, DateTime, Date, Text, Integer, func, JSON, ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from app.database.base import Base
 
@@ -39,9 +39,18 @@ class Program(Base):
     video_url: Mapped[Optional[str]] = mapped_column(String(500))
     image_url: Mapped[Optional[str]] = mapped_column(String(500))
     is_demo: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
+    
+    # Custom Questions and Requirements config
+    required_documents: Mapped[Optional[list]] = mapped_column(JSON)
+    custom_questions: Mapped[Optional[list]] = mapped_column(JSON)
+    required_profile_fields: Mapped[Optional[list]] = mapped_column(JSON)
+    
+    # Organization link
+    organization_id: Mapped[Optional[int]] = mapped_column(Integer, ForeignKey("organizations.id", ondelete="SET NULL"), nullable=True)
 
     # Relationships
     applications: Mapped[List["Application"]] = relationship("Application", back_populates="program")
+    organization_rel: Mapped[Optional["Organization"]] = relationship("Organization", back_populates="programs")
 
     def __repr__(self) -> str:
         return f"<Program {self.title} ({self.type}) slug={self.slug}>"
