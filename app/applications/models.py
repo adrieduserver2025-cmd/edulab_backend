@@ -10,7 +10,7 @@ class Application(Base):
     id: Mapped[int] = mapped_column(Integer, primary_key=True, index=True, autoincrement=True)
     student_profile_id: Mapped[int] = mapped_column(Integer, ForeignKey("student_profiles.id", ondelete="CASCADE"), nullable=False)
     program_id: Mapped[int] = mapped_column(Integer, ForeignKey("programs.id", ondelete="CASCADE"), nullable=False)
-    status: Mapped[str] = mapped_column(String(50), default="PENDING", nullable=False)  # PENDING, IN_REVIEW, INTERVIEW, PRESELECTED, ACCEPTED, REJECTED, WITHDRAWN
+    status: Mapped[str] = mapped_column(String(50), default="started", nullable=False)  # started, pending, in_review, accepted, rejected
     applied_at: Mapped[Optional[datetime.datetime]] = mapped_column(DateTime(timezone=True))
     motivation_letter_draft: Mapped[Optional[str]] = mapped_column(Text)
     ai_review_feedback: Mapped[Optional[str]] = mapped_column(Text)  # Stores IA CV check & compatibility report

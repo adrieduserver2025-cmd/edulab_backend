@@ -26,7 +26,7 @@ class Program(Base):
     # Rich Details Fields
     slug: Mapped[Optional[str]] = mapped_column(String(255), unique=True, index=True)
     organization_name: Mapped[Optional[str]] = mapped_column(String(255))
-    status: Mapped[Optional[str]] = mapped_column(String(50), default="open")  # open, closed
+    status: Mapped[Optional[str]] = mapped_column(String(50), default="pending_review")  # pending_review, approved, rejected, inactive
     short_description: Mapped[Optional[str]] = mapped_column(Text)
     activities: Mapped[Optional[list]] = mapped_column(JSON)
     requirements: Mapped[Optional[list]] = mapped_column(JSON)
@@ -44,7 +44,20 @@ class Program(Base):
     required_documents: Mapped[Optional[list]] = mapped_column(JSON)
     custom_questions: Mapped[Optional[list]] = mapped_column(JSON)
     required_profile_fields: Mapped[Optional[list]] = mapped_column(JSON)
-    
+
+    # Extended scholarship/program details
+    city: Mapped[Optional[str]] = mapped_column(String(255))
+    institution: Mapped[Optional[str]] = mapped_column(String(500))
+    level: Mapped[Optional[str]] = mapped_column(String(255))
+    funding_type: Mapped[Optional[str]] = mapped_column(String(255))
+    area: Mapped[Optional[str]] = mapped_column(String(255))
+    language: Mapped[Optional[str]] = mapped_column(String(255))
+    duration: Mapped[Optional[str]] = mapped_column(String(255))
+    official_url: Mapped[Optional[str]] = mapped_column(String(1000))
+    ideal_profile: Mapped[Optional[list]] = mapped_column(JSON)
+    testimonials: Mapped[Optional[list]] = mapped_column(JSON)
+    faq: Mapped[Optional[list]] = mapped_column(JSON)
+
     # Organization link
     organization_id: Mapped[Optional[int]] = mapped_column(Integer, ForeignKey("organizations.id", ondelete="SET NULL"), nullable=True)
 

@@ -1,5 +1,6 @@
 import uuid
-from typing import List, Dict, Any
+import datetime
+from typing import List, Dict, Any, Optional
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, func
@@ -11,6 +12,7 @@ from app.programs.models import Program
 from app.applications.models import Application, ApplicationStatusHistory
 from app.students.models import StudentProfile
 from app.organizations import schemas, service
+from app.organizations.models import Organization
 
 router = APIRouter(prefix="/organizations", tags=["Organizations"])
 
@@ -138,6 +140,13 @@ async def create_organization_program(
 
     slug = generate_slug(title)
 
+    deadline_val = program_data.get("deadline")
+    if isinstance(deadline_val, str) and deadline_val:
+        try:
+            deadline_val = datetime.date.fromisoformat(deadline_val)
+        except Exception:
+            deadline_val = None
+
     new_prog = Program(
         title=title,
         description=program_data.get("description", ""),
@@ -145,12 +154,13 @@ async def create_organization_program(
         organization=org.name,  # Force setting to the organization's name
         organization_name=org.name,
         country=program_data.get("country", "Global"),
-        deadline=program_data.get("deadline"),
+        deadline=deadline_val,
         eligibility=program_data.get("eligibility", ""),
         benefits=program_data.get("benefits", ""),
         slots=program_data.get("slots"),
         slug=slug,
         is_active=True,
+        status="pending_review",
         required_documents=program_data.get("required_documents", []),
         custom_questions=program_data.get("custom_questions", []),
         required_profile_fields=program_data.get("required_profile_fields", []),
@@ -216,7 +226,9 @@ async def update_applicant_status(
     app_record, program, student_profile, student_user = row
 
     new_status = payload.get("status")
-    allowed_statuses = ["PENDING", "IN_REVIEW", "INTERVIEW", "PRESELECTED", "ACCEPTED", "REJECTED", "WITHDRAWN"]
+    if new_status:
+        new_status = new_status.lower()
+    allowed_statuses = ["started", "pending", "in_review", "accepted", "rejected"]
     if not new_status or new_status not in allowed_statuses:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
@@ -225,7 +237,7 @@ async def update_applicant_status(
 
     old_status = app_record.status
     app_record.status = new_status
-    app_record.applied_at = func.now() if (new_status == "PENDING" and not app_record.applied_at) else app_record.applied_at
+    app_record.applied_at = func.now() if (new_status == "pending" and not app_record.applied_at) else app_record.applied_at
 
     # Insert audit history
     history_rec = ApplicationStatusHistory(
@@ -266,6 +278,17 @@ async def update_applicant_status(
 # PATCH /api/v1/admin/organizations/{id}/approve
 # PATCH /api/v1/admin/organizations/{id}/reject
 admin_router = APIRouter(prefix="/admin/organizations", tags=["Admin Organizations"])
+
+@admin_router.get("", response_model=List[schemas.OrganizationResponse])
+async def list_organizations(
+    status: Optional[str] = None,
+    current_user: User = Depends(check_role(["admin"])),
+    db: AsyncSession = Depends(get_db)
+):
+    """
+    List all organizations, optionally filtered by status (Admin only).
+    """
+    return await service.get_all_organizations(db, status=status)
 
 @admin_router.get("/pending", response_model=List[schemas.OrganizationResponse])
 async def list_pending_organizations(
@@ -310,3 +333,108 @@ async def reject_org(
             detail="Organización no encontrada o falló el rechazo."
         )
     return org
+
+@admin_router.put("/{id}", response_model=schemas.OrganizationResponse)
+async def update_organization_by_admin(
+    id: int,
+    payload: schemas.OrganizationUpdate,
+    current_user: User = Depends(check_role(["admin"])),
+    db: AsyncSession = Depends(get_db)
+):
+    """
+    Updates organization details (Admin only).
+    """
+    result = await db.execute(select(Organization).where(Organization.id == id))
+    org = result.scalars().first()
+    if not org:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Organización no encontrada."
+        )
+
+    user_result = await db.execute(select(User).where(User.id == org.user_id))
+    user = user_result.scalars().first()
+
+    update_data = payload.model_dump(exclude_unset=True)
+    
+    # Handle status change if provided
+    status_change = update_data.get("status")
+    if status_change and status_change != org.status:
+        if status_change == "APPROVED":
+            org.approved_at = func.now()
+            org.approved_by = current_user.id
+            if user:
+                user.role = "organization"
+        elif status_change == "REJECTED":
+            org.approved_at = None
+            org.approved_by = current_user.id
+            if user:
+                user.role = "organization_pending"
+        elif status_change == "PENDING":
+            org.approved_at = None
+            org.approved_by = None
+            if user:
+                user.role = "organization_pending"
+
+    for field, value in update_data.items():
+        if field != "status":
+            setattr(org, field, value)
+        
+    if user:
+        if "contact_email" in update_data:
+            user.email = update_data["contact_email"]
+        if "contact_name" in update_data:
+            user.full_name = update_data["contact_name"]
+
+    await db.commit()
+    await db.refresh(org)
+    return org
+
+@admin_router.delete("/{id}")
+async def delete_organization_by_admin(
+    id: int,
+    current_user: User = Depends(check_role(["admin"])),
+    db: AsyncSession = Depends(get_db)
+):
+    """
+    Deletes an organization and all its cascade dependencies (Admin only).
+    """
+    # 1. Fetch Organization
+    result = await db.execute(select(Organization).where(Organization.id == id))
+    org = result.scalars().first()
+    if not org:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Organización no encontrada."
+        )
+
+    # 2. Fetch all programs owned by this organization
+    prog_result = await db.execute(select(Program).where(Program.organization_id == id))
+    programs = prog_result.scalars().all()
+    program_ids = [p.id for p in programs]
+
+    # 3. Delete all applications status history and applications for those programs
+    if program_ids:
+        app_result = await db.execute(select(Application).where(Application.program_id.in_(program_ids)))
+        apps = app_result.scalars().all()
+        app_ids = [a.id for a in apps]
+        
+        if app_ids:
+            from sqlalchemy import delete
+            await db.execute(delete(ApplicationStatusHistory).where(ApplicationStatusHistory.application_id.in_(app_ids)))
+            await db.execute(delete(Application).where(Application.id.in_(app_ids)))
+
+        from sqlalchemy import delete
+        await db.execute(delete(Program).where(Program.id.in_(program_ids)))
+
+    # 4. Delete the associated User account
+    user_id = org.user_id
+    if user_id:
+        from sqlalchemy import delete
+        await db.execute(delete(User).where(User.id == user_id))
+
+    # 5. Delete the organization itself
+    await db.delete(org)
+    await db.commit()
+
+    return {"detail": "Organización y todas sus dependencias eliminadas con éxito."}

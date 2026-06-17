@@ -177,11 +177,146 @@ async def seed_programs_db():
             "video_url": "https://www.youtube.com/watch?v=onu-video",
             "image_url": "/assets/images/un_volunteering.jpg",
             "is_demo": True
+        },
+        {
+            "title": "Beca Fulbright",
+            "description": "El programa Fulbright es una iniciativa del gobierno de Estados Unidos orientada a promover el intercambio educativo y cultural entre países. Ofrece becas a profesionales y estudiantes internacionales para realizar estudios de posgrado, investigación o actividades académicas en universidades estadounidenses.\n\nSu objetivo principal es formar profesionales con alta preparación académica y una visión global, capaces de contribuir al desarrollo de sus países de origen.\n\nA diferencia de otras becas, Fulbright no solo evalúa el rendimiento académico, sino también el perfil profesional, el potencial de liderazgo y el compromiso con la comunidad.\n\nAdemás del financiamiento, los becarios pasan a formar parte de la red internacional Fulbright, que incluye miles de egresados en distintas áreas a nivel mundial.",
+            "type": "scholarship",
+            "organization": "Fulbright Program / Gobierno de Estados Unidos",
+            "country": "Estados Unidos",
+            "deadline": None,
+            "eligibility": "Título universitario, buen nivel académico, inglés TOEFL/IELTS, ensayos de motivación, cartas de recomendación, experiencia relevante y compromiso con el país de origen.",
+            "benefits": "Matrícula completa, pasajes internacionales, estipendio mensual, seguro médico, apoyo inicial de instalación y acceso a red internacional Fulbright.",
+            "slots": None,
+            "slug": "fulbright-beca",
+            "organization_name": "Fulbright",
+            "status": "approved",
+            "short_description": "Fulbright ofrece becas completas para estudios de posgrado, investigación o actividades académicas en universidades de Estados Unidos, formando líderes con visión global e impacto social.",
+            "activities": [
+                "Estudios de maestría en universidades de EE.UU. 🎓",
+                "Investigación académica o científica 🔬",
+                "Intercambio cultural y liderazgo 🌍",
+                "Networking con becarios internacionales 🤝"
+            ],
+            "requirements": [
+                "Título universitario",
+                "Buen nivel académico",
+                "Certificado de inglés TOEFL/IELTS",
+                "Ensayos: historia personal y plan de estudios",
+                "Cartas de recomendación",
+                "Experiencia relevante",
+                "Compromiso con el país de origen"
+            ],
+            "benefits_json": [
+                "Matrícula completa 💸",
+                "Pasajes internacionales ✈️",
+                "Estipendio mensual",
+                "Seguro médico",
+                "Apoyo inicial de instalación",
+                "Acceso a red internacional Fulbright 🌍"
+            ],
+            "dates_info": "Convocatoria variable según país | Generalmente cierra en Octubre",
+            "support_ai": [
+                "Crear ensayo paso a paso",
+                "Mejorar perfil automáticamente",
+                "Practicar entrevista",
+                "Preparar cartas de motivación",
+                "Revisar requisitos antes de postular"
+            ],
+            "facebook_url": "https://www.facebook.com/FulbrightProgram",
+            "instagram_url": "https://www.instagram.com/fulbrightprogram/",
+            "youtube_url": "https://www.youtube.com/@FulbrightProgram",
+            "video_url": "https://www.youtube.com/watch?v=fulbright-video",
+            "image_url": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80",
+            "is_demo": False,
+            # Extended fields
+            "city": "Variable según universidad",
+            "institution": "Fulbright Foreign Student Program",
+            "level": "Maestría / Investigación",
+            "funding_type": "100% completa",
+            "area": "Multidisciplinaria",
+            "language": "Inglés",
+            "duration": "1–2 años",
+            "official_url": "https://foreign.fulbrightonline.org/",
+            "ideal_profile": [
+                {"emoji": "🏆", "title": "Profesionales con liderazgo", "tags": ["Liderazgo probado", "Gestión de equipos"]},
+                {"emoji": "🤝", "title": "Compromiso social", "tags": ["Voluntariado", "Impacto comunitario"]},
+                {"emoji": "🌐", "title": "Visión global", "tags": ["Mentalidad global", "Diversidad cultural"]},
+                {"emoji": "💡", "title": "Interés en generar impacto", "tags": ["Innovación", "Retorno al país"]}
+            ],
+            "testimonials": [
+                {"name": "Valeria Montoya", "country": "🇧🇴 Bolivia", "year": "2023", "university": "Columbia University", "program": "Políticas Públicas", "quote": "Fulbright cambió mi vida. No solo aprendí en las mejores aulas del mundo, sino que construí una red de contactos que me permite generar impacto real en Bolivia.", "avatar": "VM"},
+                {"name": "Carlos Quispe", "country": "🇧🇴 Bolivia", "year": "2022", "university": "Johns Hopkins", "program": "Salud Pública", "quote": "El proceso de aplicación fue desafiante, pero EDULAB me ayudó a preparar mis ensayos y simular entrevistas. Hoy trabajo en políticas de salud pública.", "avatar": "CQ"},
+                {"name": "Sofía Gutiérrez", "country": "🇵🇪 Perú", "year": "2024", "university": "Georgetown University", "program": "Derecho Internacional", "quote": "Lo que más valoro de Fulbright es la red alumni. Hay ex-becarios en cada ministerio, empresa global y organismo internacional.", "avatar": "SG"}
+            ],
+            "faq": [
+                {"question": "¿Necesito experiencia laboral para postular?", "answer": "Sí, se recomienda tener al menos 2 años de experiencia profesional relevante. Fulbright valora el impacto que has tenido en tu campo y tu potencial de liderazgo."},
+                {"question": "¿Qué nivel de inglés exigen?", "answer": "Se requiere TOEFL iBT 79+ o IELTS 6.5+ mínimo. Los puntajes exactos pueden variar según el programa y universidad destino."},
+                {"question": "¿Puedo aplicar desde Bolivia?", "answer": "Sí. La Comisión Fulbright Bolivia gestiona las aplicaciones locales. Debes contactarles directamente para conocer las fechas exactas de la convocatoria."},
+                {"question": "¿Cuándo abre la convocatoria?", "answer": "Generalmente la convocatoria abre entre junio y agosto, con cierre en octubre. Las fechas varían según el país. EDULAB te notifica cuando abre."},
+                {"question": "¿Puedo elegir en qué universidad estudiar?", "answer": "En parte. Fulbright trabaja con más de 1,500 universidades. Puedes proponer preferencias en tu aplicación, aunque la asignación final depende de disponibilidad y tu perfil."},
+                {"question": "¿Tengo que regresar después de la beca?", "answer": "Sí, el programa requiere que los becarios regresen a su país de origen para aplicar sus conocimientos. Esto forma parte del compromiso J-1 visa."},
+                {"question": "¿Cómo me ayuda EDULAB en el proceso?", "answer": "EDULAB te ayuda a preparar tus ensayos con IA, simular entrevistas, optimizar tu CV, revisar requisitos y hacer seguimiento de tu aplicación en tiempo real."}
+            ]
         }
     ]
 
+    from app.organizations.models import Organization
+    from app.users.models import User
+    from sqlalchemy import func
+
+    async def get_or_create_seed_org(db, name: str, email: str, user_uid: str) -> int:
+        # Check if organization already exists with name matching the program's organization_name (case-insensitive)
+        result = await db.execute(select(Organization).where(func.lower(Organization.name) == name.lower()))
+        org = result.scalars().first()
+        if org:
+            logger.info(f"Using existing organization '{org.name}' (ID: {org.id}, Status: {org.status}) for seed programs.")
+            return org.id
+            
+        # If AIESEC or others don't exist, create mock user and organization
+        user_res = await db.execute(select(User).where(User.email == email))
+        user = user_res.scalars().first()
+        if not user:
+            user = User(
+                firebase_uid=user_uid,
+                email=email,
+                full_name=name,
+                role="organization",
+                status="active"
+            )
+            db.add(user)
+            await db.flush()
+            
+        org = Organization(
+            user_id=user.id,
+            name=name,
+            type="ONG" if name == "AIESEC" else "Universidad" if "University" in name else "Fundación",
+            country="Global",
+            city="Global",
+            contact_name=f"Admin {name}",
+            contact_position="Director",
+            contact_email=email,
+            contact_phone="12345678",
+            status="APPROVED"
+        )
+        db.add(org)
+        await db.flush()
+        await db.commit()
+        return org.id
+
     async with SessionLocal() as db:
         for seed_data in seeds:
+            # Normalize status to approved
+            seed_data["status"] = "approved"
+            
+            # Fetch/create respective organization
+            org_name = seed_data["organization_name"] or seed_data["organization"]
+            org_email = f"{org_name.lower().replace(' ', '').replace('-', '')}@test.com"
+            org_uid = f"mock-{org_name.lower().replace(' ', '').replace('-', '')}-uid"
+            
+            org_id = await get_or_create_seed_org(db, org_name, org_email, org_uid)
+            seed_data["organization_id"] = org_id
+            
             result = await db.execute(
                 select(Program).where(Program.slug == seed_data["slug"])
             )
@@ -189,7 +324,13 @@ async def seed_programs_db():
             if not existing:
                 new_program = Program(**seed_data)
                 db.add(new_program)
-                logger.info(f"Added seed program: '{seed_data['title']}' ({seed_data['slug']})")
+                logger.info(f"Added seed program: '{seed_data['title']}' ({seed_data['slug']}) linked to Org ID {org_id}")
+            else:
+                if existing.organization_id is None:
+                    existing.organization_id = org_id
+                existing.status = "approved"
+                db.add(existing)
+                logger.info(f"Ensured seed program: '{seed_data['title']}' ({seed_data['slug']}) is approved and linked to Org ID {existing.organization_id}")
         await db.commit()
     logger.info("🌱 Database programs/opportunities seeding finished successfully.")
 

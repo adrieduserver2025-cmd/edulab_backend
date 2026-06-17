@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Optional
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
@@ -12,9 +12,9 @@ router = APIRouter(prefix="/programs", tags=["Programs"])
 @router.get("/")
 async def list_programs(db: AsyncSession = Depends(get_db)):
     """
-    List all active educational programs (scholarships, leadership, summer schools, etc.).
+    List all active approved educational programs (scholarships, leadership, summer schools, etc.).
     """
-    result = await db.execute(select(Program).where(Program.is_active == True))
+    result = await db.execute(select(Program).where(Program.is_active == True, Program.status == "approved"))
     programs = result.scalars().all()
     # If DB is empty, return a set of beautiful initial mock data
     if not programs:
@@ -75,3 +75,130 @@ async def create_program(
     await db.commit()
     await db.refresh(new_prog)
     return new_prog
+
+# ================= ADMIN ROUTER FOR PROGRAMS =================
+admin_programs_router = APIRouter(prefix="/admin/programs", tags=["Admin Programs"])
+
+@admin_programs_router.get("")
+async def list_admin_programs(
+    status: Optional[str] = None,
+    current_user: User = Depends(check_role(["admin"])),
+    db: AsyncSession = Depends(get_db)
+):
+    """
+    List all programs, optionally filtered by status (Admin only).
+    """
+    query = select(Program)
+    if status:
+        query = query.where(Program.status == status)
+    query = query.order_by(Program.created_at.desc())
+    result = await db.execute(query)
+    return result.scalars().all()
+
+@admin_programs_router.patch("/{id}/approve")
+async def approve_program(
+    id: int,
+    current_user: User = Depends(check_role(["admin"])),
+    db: AsyncSession = Depends(get_db)
+):
+    """
+    Approve program/convocatoria (Admin only). Sets status to 'approved'.
+    """
+    result = await db.execute(select(Program).where(Program.id == id))
+    program = result.scalars().first()
+    if not program:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Convocatoria no encontrada."
+        )
+    program.status = "approved"
+    await db.commit()
+    await db.refresh(program)
+    return program
+
+@admin_programs_router.patch("/{id}/reject")
+async def reject_program(
+    id: int,
+    current_user: User = Depends(check_role(["admin"])),
+    db: AsyncSession = Depends(get_db)
+):
+    """
+    Reject program/convocatoria (Admin only). Sets status to 'rejected'.
+    """
+    result = await db.execute(select(Program).where(Program.id == id))
+    program = result.scalars().first()
+    if not program:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Convocatoria no encontrada."
+        )
+    program.status = "rejected"
+    await db.commit()
+    await db.refresh(program)
+    return program
+
+@admin_programs_router.put("/{id}")
+async def update_program_by_admin(
+    id: int,
+    program_data: dict,
+    current_user: User = Depends(check_role(["admin"])),
+    db: AsyncSession = Depends(get_db)
+):
+    """
+    Updates program/convocatoria details (Admin only).
+    """
+    result = await db.execute(select(Program).where(Program.id == id))
+    program = result.scalars().first()
+    if not program:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Convocatoria no encontrada."
+        )
+
+    for key, value in program_data.items():
+        if key in ["id", "created_at", "updated_at", "slug", "organization_id"]:
+            continue
+        if hasattr(program, key):
+            # Parse dates if key is deadline
+            if key == "deadline" and isinstance(value, str) and value:
+                import datetime
+                try:
+                    value = datetime.date.fromisoformat(value)
+                except Exception:
+                    value = None
+            setattr(program, key, value)
+
+    await db.commit()
+    await db.refresh(program)
+    return program
+
+@admin_programs_router.delete("/{id}")
+async def delete_program_by_admin(
+    id: int,
+    current_user: User = Depends(check_role(["admin"])),
+    db: AsyncSession = Depends(get_db)
+):
+    """
+    Deletes a program/convocatoria and cleans up related applications (Admin only).
+    """
+    result = await db.execute(select(Program).where(Program.id == id))
+    program = result.scalars().first()
+    if not program:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Convocatoria no encontrada."
+        )
+
+    from app.applications.models import Application, ApplicationStatusHistory
+    app_result = await db.execute(select(Application).where(Application.program_id == id))
+    apps = app_result.scalars().all()
+    app_ids = [a.id for a in apps]
+
+    if app_ids:
+        from sqlalchemy import delete
+        await db.execute(delete(ApplicationStatusHistory).where(ApplicationStatusHistory.application_id.in_(app_ids)))
+        await db.execute(delete(Application).where(Application.id.in_(app_ids)))
+
+    await db.delete(program)
+    await db.commit()
+    return {"detail": "Convocatoria y sus dependencias eliminadas con éxito."}

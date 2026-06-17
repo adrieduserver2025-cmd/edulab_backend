@@ -102,6 +102,17 @@ async def get_pending_organizations(db: AsyncSession) -> List[Organization]:
     )
     return result.scalars().all()
 
+async def get_all_organizations(db: AsyncSession, status: Optional[str] = None) -> List[Organization]:
+    """
+    Retrieve all organizations, optionally filtered by status (PENDING, APPROVED, REJECTED).
+    """
+    query = select(Organization)
+    if status:
+        query = query.where(Organization.status == status)
+    query = query.order_by(Organization.created_at.desc())
+    result = await db.execute(query)
+    return result.scalars().all()
+
 async def approve_organization(db: AsyncSession, org_id: int, admin_user_id: int) -> Optional[Organization]:
     """
     Approves organization: status APPROVED, updates claims to 'organization', User.role to 'organization'.

@@ -31,7 +31,11 @@ async def get_current_user(
         if "admin" in token:
             role = "admin"
             uid = "mock-admin-uid"
-            email = "admin@edulab.com"
+            email = "admin@gmail.com"
+        elif "aiesec" in token:
+            role = "organization"
+            uid = "mock-aiesec-uid"
+            email = "aiesec@test.com"
         elif "reviewer" in token:
             role = "reviewer"
             uid = "mock-reviewer-uid"
@@ -164,3 +168,5 @@ def check_role(allowed_roles: list[str]):
             )
         return current_user
     return dependency
+
+# Touch for uvicorn reload

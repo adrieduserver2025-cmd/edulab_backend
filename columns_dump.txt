@@ -1,0 +1,32 @@
+Column: id | Value: 4 | Type: <class 'int'>
+Column: title | Value: 'Voluntariado en AIESEC' | Type: <class 'str'>
+Column: description | Value: 'El voluntariado de AIESEC es una experiencia internacional de corta duración que permite a jóvenes participar en proyectos sociales en distintos países, con el objetivo de generar impacto positivo en comunidades mientras desarrollan habilidades personales y profesionales.\n\nMás allá del trabajo voluntario, AIESEC busca formar líderes globales. Durante el programa, los jóvenes fortalecen competencias como comunicación intercultural, trabajo en equipo, adaptabilidad y resolución de problemas en entornos reales.\n\nAdemás, el voluntariado incluye acompañamiento antes, durante y después de la experiencia, así como espacios de integración cultural que permiten al participante sumergirse en la realidad del país anfitrión.' | Type: <class 'str'>
+Column: type | Value: 'volunteering' | Type: <class 'str'>
+Column: organization | Value: 'AIESEC International' | Type: <class 'str'>
+Column: country | Value: 'Global' | Type: <class 'str'>
+Column: deadline | Value: datetime.date(2026, 9, 30) | Type: <class 'datetime.date'>
+Column: eligibility | Value: 'Jóvenes entre 18 y 30 años con ganas de generar impacto social.' | Type: <class 'str'>
+Column: benefits | Value: 'Hospedaje local, desarrollo de liderazgo y certificado internacional.' | Type: <class 'str'>
+Column: slots | Value: 50 | Type: <class 'int'>
+Column: is_active | Value: True | Type: <class 'bool'>
+Column: created_at | Value: datetime.datetime(2026, 6, 17, 0, 35, 18, 511123, tzinfo=datetime.timezone.utc) | Type: <class 'datetime.datetime'>
+Column: updated_at | Value: datetime.datetime(2026, 6, 17, 0, 35, 18, 511123, tzinfo=datetime.timezone.utc) | Type: <class 'datetime.datetime'>
+Column: slug | Value: 'aiesec-voluntariado' | Type: <class 'str'>
+Column: organization_name | Value: 'AIESEC' | Type: <class 'str'>
+Column: status | Value: 'approved' | Type: <class 'str'>
+Column: short_description | Value: 'Vive una experiencia internacional que transforma tu forma de ver el mundo.' | Type: <class 'str'>
+Column: activities | Value: ['Enseñanza en comunidades 📚', 'Proyectos sociales 🤝', 'Campañas ambientales 🌱', 'Actividades interculturales 🌍'] | Type: <class 'list'>
+Column: requirements | Value: ['Tener entre 18 y 30 años', 'Interés en voluntariado internacional', 'Nivel básico/intermedio de inglés', 'Disponibilidad para viajar'] | Type: <class 'list'>
+Column: benefits_json | Value: ['Experiencia internacional 🌍', 'Desarrollo de liderazgo 🧠', 'Red global de contactos 🤝', 'Certificado internacional 📜'] | Type: <class 'list'>
+Column: dates_info | Value: 'Convocatoria: Abierta durante el año | Salidas: Según proyecto' | Type: <class 'str'>
+Column: support_ai | Value: ['Elegir el mejor voluntariado según el perfil del usuario', 'Preparar la aplicación', 'Redactar carta de motivación con IA'] | Type: <class 'list'>
+Column: facebook_url | Value: 'https://www.facebook.com/AIESECglobal' | Type: <class 'str'>
+Column: instagram_url | Value: 'https://www.instagram.com/aiesecglobal/' | Type: <class 'str'>
+Column: youtube_url | Value: 'https://www.youtube.com/@aiesecglobal' | Type: <class 'str'>
+Column: video_url | Value: 'https://www.youtube.com/watch?v=7h43WCAVXdY' | Type: <class 'str'>
+Column: image_url | Value: '/assets/images/aiesec_hero.jpg' | Type: <class 'str'>
+Column: is_demo | Value: False | Type: <class 'bool'>
+Column: required_documents | Value: None | Type: <class 'NoneType'>
+Column: custom_questions | Value: None | Type: <class 'NoneType'>
+Column: required_profile_fields | Value: None | Type: <class 'NoneType'>
+Column: organization_id | Value: 4 | Type: <class 'int'>

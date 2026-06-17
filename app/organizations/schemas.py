@@ -28,12 +28,21 @@ class OrganizationRegister(OrganizationBase):
             raise ValueError("La contraseña debe tener al menos 6 caracteres.")
         return v
 
-class OrganizationUpdate(OrganizationBase):
-    contact_name: str
-    contact_position: str
-    contact_email: EmailStr
-    contact_phone: str
+class OrganizationUpdate(BaseModel):
+    name: Optional[str] = None
+    type: Optional[str] = None
+    country: Optional[str] = None
+    city: Optional[str] = None
+    website: Optional[str] = None
+    social_links: Optional[Dict[str, str]] = None
+    description: Optional[str] = None
+    logo_url: Optional[str] = None
+    contact_name: Optional[str] = None
+    contact_position: Optional[str] = None
+    contact_email: Optional[EmailStr] = None
+    contact_phone: Optional[str] = None
     verification_document_url: Optional[str] = None
+    status: Optional[str] = None
 
 class OrganizationResponse(OrganizationBase):
     model_config = ConfigDict(from_attributes=True)
