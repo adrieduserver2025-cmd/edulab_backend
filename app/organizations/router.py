@@ -172,6 +172,64 @@ async def create_organization_program(
     await db.refresh(new_prog)
     return new_prog
 
+@router.put("/me/programs/{program_id}")
+async def update_organization_program(
+    program_id: int,
+    program_data: dict,
+    current_user: User = Depends(check_role(["organization"])),
+    db: AsyncSession = Depends(get_db)
+):
+    """
+    Updates an existing program owned by the authenticated organization.
+    Resets status to 'pending_review' so the admin can review and approve changes.
+    """
+    org = await service.get_organization_by_user_id(db, current_user.id)
+    if not org:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Perfil de organización no encontrado."
+        )
+
+    # Fetch the program and verify it belongs to this organization
+    result = await db.execute(
+        select(Program).where(Program.id == program_id, Program.organization_id == org.id)
+    )
+    program = result.scalars().first()
+    if not program:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Convocatoria no encontrada o no pertenece a su organización."
+        )
+
+    # Allowed editable fields
+    allowed_fields = [
+        "title", "description", "type", "country", "deadline", "eligibility",
+        "benefits", "slots", "required_profile_fields", "required_documents", "custom_questions"
+    ]
+
+    for key, value in program_data.items():
+        if key not in allowed_fields:
+            continue
+        if hasattr(program, key):
+            if key == "deadline" and isinstance(value, str) and value:
+                try:
+                    value = datetime.date.fromisoformat(value)
+                except Exception:
+                    value = None
+            elif key == "slots" and value is not None:
+                try:
+                    value = int(value)
+                except (TypeError, ValueError):
+                    value = None
+            setattr(program, key, value)
+
+    # Force back to pending_review so admin can approve changes
+    program.status = "pending_review"
+
+    await db.commit()
+    await db.refresh(program)
+    return program
+
 @router.get("/me/applicants", response_model=List[schemas.OrganizationApplicantResponse])
 async def get_my_applicants(
     current_user: User = Depends(check_role(["organization"])),
