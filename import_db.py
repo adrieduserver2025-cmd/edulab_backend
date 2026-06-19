@@ -30,12 +30,12 @@ def deserialize_val(val, col_type):
 
 async def import_data():
     if not os.path.exists("db_backup.json"):
-        print("❌ Error: No se encontró el archivo 'db_backup.json' en este directorio.")
-        print("Asegúrate de copiarlo desde tu otra laptop a esta misma carpeta.")
+        print("Error: No se encontro el archivo 'db_backup.json' en este directorio.")
+        print("Asegurate de copiarlo desde tu otra laptop a esta misma carpeta.")
         return
 
-    print("⚠️ ADVERTENCIA: Este script restaurará la base de datos local.")
-    print("Para evitar errores de duplicación, se recomienda limpiar las tablas existentes.")
+    print("ADVERTENCIA: Este script restaurara la base de datos local.")
+    print("Para evitar errores de duplicacion, se recomienda limpiar las tablas existentes.")
     print("¿Deseas vaciar y recrear la base de datos antes de importar? (escribe 'yes' para limpiar, o presiona Enter para intentar importar directamente):")
     
     try:
@@ -51,9 +51,9 @@ async def import_data():
         print("Creating all tables...")
         async with engine.begin() as conn:
             await conn.run_sync(Base.metadata.create_all)
-        print("✅ Base de datos recreada y vacía.")
+        print("Base de datos recreada y vacia.")
     else:
-        print("⚠️ Continuando sin limpiar la base de datos (podrían ocurrir errores de clave duplicada).")
+        print("Continuando sin limpiar la base de datos (podrian ocurrir errores de clave duplicada).")
 
     with open("db_backup.json", "r", encoding="utf-8") as f:
         backup_data = json.load(f)
@@ -92,11 +92,11 @@ async def import_data():
             
             # Flush after each table to maintain foreign key integrity
             await db.flush()
-            print(f"✅ Imported {name} successfully.")
+            print(f"Imported {name} successfully.")
             
         await db.commit()
         
-    print("\n🎉 Restauración completada con éxito!")
+    print("\nRestauracion completada con exito!")
 
 if __name__ == "__main__":
     asyncio.run(import_data())

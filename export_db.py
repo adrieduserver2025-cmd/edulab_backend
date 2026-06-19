@@ -22,7 +22,7 @@ def serialize_val(val):
     return val
 
 async def export_data():
-    print("⏳ Iniciando exportación de datos locales...")
+    print("Iniciando exportacion de datos locales...")
     
     # Order of tables to fetch
     models = [
@@ -53,12 +53,12 @@ async def export_data():
                 records.append(record)
                 
             backup_data[name] = records
-            print(f"✅ Read {len(records)} records from {name}.")
+            print(f"Read {len(records)} records from {name}.")
             
     with open("db_backup.json", "w", encoding="utf-8") as f:
         json.dump(backup_data, f, indent=2, ensure_ascii=False)
         
-    print("\n🎉 Exportación completada con éxito!")
+    print("\nExportacion completada con exito!")
     print("El archivo de copia de seguridad se ha guardado como 'db_backup.json'.")
     print("Copia este archivo 'db_backup.json' a tu otra laptop en la misma carpeta.")
 

@@ -5,6 +5,7 @@ __pycache__/
 
 # Variables de entorno
 .env
+db_backup.json
 
 # Firebase
 firebase-credentials.json
