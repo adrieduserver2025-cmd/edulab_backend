@@ -12,3 +12,10 @@ run:
   command: ./venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000
   network:
     port: 8000
+  env:
+    - name: DATABASE_URL
+      value: "postgresql+psycopg2://postgres:MigueL69048909@edula-db.cj0ag8ymuqio.us-east-2.rds.amazonaws.com:5432/edulab"
+    - name: MOCK_FIREBASE_AUTH
+      value: "True"
+    - name: DEV_MODE
+      value: "True"
