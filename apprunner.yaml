@@ -19,3 +19,5 @@ run:
       value: "True"
     - name: DEV_MODE
       value: "True"
+    - name: BACKEND_CORS_ORIGINS
+      value: "http://localhost:5173,https://main.d19ospd1qs6k2p.amplifyapp.com,https://d19ospd1qs6k2p.amplifyapp.com"
