@@ -28,6 +28,25 @@ async def get_current_user(
         uid = token
         email = f"{token}@edulab.com"
 
+        # If it's a real JWT token but we are running in mock dev mode, let's decode it
+        # without verification to get the real uid and email (avoiding database length constraint error)
+        if not token.startswith("mock-") and len(token.split('.')) == 3:
+            import base64
+            import json
+            try:
+                parts = token.split('.')
+                payload_b64 = parts[1]
+                payload_b64 += '=' * (4 - len(payload_b64) % 4)
+                payload_json = base64.urlsafe_b64decode(payload_b64).decode('utf-8')
+                payload = json.loads(payload_json)
+                decoded_uid = payload.get("user_id") or payload.get("sub")
+                decoded_email = payload.get("email")
+                if decoded_uid and decoded_email:
+                    uid = decoded_uid
+                    email = decoded_email
+            except Exception as e:
+                logger.error(f"Error decoding JWT token in mock bypass mode: {e}")
+
         if "admin" in token:
             role = "admin"
             uid = "mock-admin-uid"
