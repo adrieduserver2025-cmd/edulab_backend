@@ -1,7 +1,33 @@
 import datetime
 from typing import List, Optional
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, field_validator
 from datetime import date
+
+def parse_date_string(v):
+    if not v:
+        return None
+    if isinstance(v, date):
+        return v
+    if isinstance(v, str):
+        v = v.strip()
+        if not v:
+            return None
+        # Try YYYY-MM-DD
+        try:
+            return datetime.datetime.strptime(v, "%Y-%m-%d").date()
+        except ValueError:
+            pass
+        # Try DD/MM/YYYY
+        try:
+            return datetime.datetime.strptime(v, "%d/%m/%Y").date()
+        except ValueError:
+            pass
+        # Try MM/DD/YYYY
+        try:
+            return datetime.datetime.strptime(v, "%m/%d/%Y").date()
+        except ValueError:
+            pass
+    return v
 
 class StudentProfileBase(BaseModel):
     country: str = Field(..., description="Country of residence")
@@ -24,6 +50,11 @@ class StudentProfileBase(BaseModel):
     work_experience: Optional[List[dict]] = Field(default=None, description="List of work experience items")
     volunteer_experience: Optional[List[dict]] = Field(default=None, description="List of volunteer experience items")
     general_motivation_letter: Optional[str] = Field(None, description="General motivation letter text")
+
+    @field_validator('birth_date', 'expected_graduation_date', mode='before')
+    @classmethod
+    def validate_dates(cls, v):
+        return parse_date_string(v)
 
 class StudentProfileCreate(StudentProfileBase):
     pass
@@ -50,6 +81,11 @@ class StudentProfileUpdate(BaseModel):
     volunteer_experience: Optional[List[dict]] = None
     general_motivation_letter: Optional[str] = None
 
+    @field_validator('birth_date', 'expected_graduation_date', mode='before')
+    @classmethod
+    def validate_dates(cls, v):
+        return parse_date_string(v)
+
 class StudentProfile(StudentProfileBase):
     model_config = ConfigDict(from_attributes=True)
 
@@ -58,3 +94,4 @@ class StudentProfile(StudentProfileBase):
     profile_completion: int
     created_at: datetime.datetime
     updated_at: datetime.datetime
+
