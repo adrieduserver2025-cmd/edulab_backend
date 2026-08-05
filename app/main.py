@@ -258,6 +258,348 @@ async def seed_programs_db():
                 {"question": "¿Tengo que regresar después de la beca?", "answer": "Sí, el programa requiere que los becarios regresen a su país de origen para aplicar sus conocimientos. Esto forma parte del compromiso J-1 visa."},
                 {"question": "¿Cómo me ayuda EDULAB en el proceso?", "answer": "EDULAB te ayuda a preparar tus ensayos con IA, simular entrevistas, optimizar tu CV, revisar requisitos y hacer seguimiento de tu aplicación en tiempo real."}
             ]
+        },
+        {
+            "title": "Chevening Scholarships",
+            "slug": "chevening-beca",
+            "type": "scholarship",
+            "organization": "Gobierno del Reino Unido (FCDO)",
+            "organization_name": "Chevening UK",
+            "country": "Reino Unido",
+            "city": "Londres y otras ciudades del Reino Unido",
+            "institution": "Universidades del Reino Unido (UK Universities)",
+            "level": "Maestría",
+            "funding_type": "100% completa",
+            "area": "Multidisciplinaria",
+            "language": "Inglés",
+            "duration": "1 año académico (12 meses)",
+            "deadline": "2026-10-07",
+            "official_url": "https://www.chevening.org",
+            "short_description": "Programa de élite del gobierno británico que busca profesionales bolivianos con alto potencial de liderazgo y compromiso social para realizar una maestría de un año en cualquier universidad del Reino Unido.",
+            "description": "Programa de élite del gobierno británico que busca profesionales bolivianos con alto potencial de liderazgo y compromiso social para realizar una maestría de un año en cualquier universidad del Reino Unido. Cubre matrícula, manutención, pasajes y costo de visa.\n\nChevening evalúa el potencial de liderazgo, la excelencia académica y la red de contactos profesionales del postulante. Al finalizar, el becario debe retornar a Bolivia por al menos 2 años.\n\nUno de los programas más prestigiosos del mundo. La carta de motivación y las entrevistas son decisivas. Las horas de voluntariado en organizaciones formales sí cuentan como experiencia.",
+            "eligibility": "Ciudadanía boliviana, título universitario equivalente a 2:1 británico, mínimo 2.800 horas (aprox. 2 años) de experiencia laboral o voluntariado post-grado, certificado de inglés (IELTS/TOEFL) y compromiso de retorno por 2 años.",
+            "benefits": "Matrícula completa, pasajes internacionales ida y vuelta, estipendio mensual (£1.690 en Londres / £1.378 fuera de Londres), costo de visa, asignación de llegada (£1.236) y despedida (£619). Valor total aprox. £30.000.",
+            "slots": None,
+            "status": "approved",
+            "activities": [
+                "Estudios de maestría de 1 año en el Reino Unido 🇬🇧",
+                "Networking en la Red Global de Becarios Chevening 🤝",
+                "Eventos diplomáticos y culturales del FCDO 🏛️",
+                "Proyectos de retorno e impacto social en Bolivia 🇧🇴"
+            ],
+            "requirements": [
+                "Ciudadanía boliviana",
+                "Título universitario equivalente a 2:1 británico",
+                "Mínimo 2.800 horas de experiencia laboral post-grado (o voluntariado)",
+                "Certificado de inglés (IELTS/TOEFL) al estándar Chevening",
+                "Seleccionar 3 opciones de maestría en el Reino Unido",
+                "Compromiso de retorno mínimo de 2 años a Bolivia tras la beca"
+            ],
+            "benefits_json": [
+                "Matrícula completa 💸",
+                "Pasajes internacionales ida y vuelta ✈️",
+                "Estipendio mensual de hasta £1.690/mes 💰",
+                "Costo de visa de estudiante cubierto 🛡️",
+                "Asignación de llegada (£1.236) e instalación 📦",
+                "Acceso a la Red Global Chevening (+50.000 alumni) 🌐"
+            ],
+            "dates_info": "Cierre 7 de Octubre de 2026 | Apertura en Agosto 2026",
+            "support_ai": [
+                "Redactar ensayos de liderazgo y networking Chevening",
+                "Calcular y certificar 2.800 horas de experiencia laboral/voluntariado",
+                "Simulacro de entrevista de selección en inglés",
+                "Preparar postulación a las 3 universidades británicas"
+            ],
+            "facebook_url": "https://www.facebook.com/cheveningfcdo",
+            "instagram_url": "https://www.instagram.com/cheveningfcdo/",
+            "youtube_url": "https://www.youtube.com/@CheveningFCDO",
+            "video_url": "https://www.youtube.com/watch?v=chevening-video",
+            "image_url": "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&q=80",
+            "is_demo": False,
+            "ideal_profile": [
+                {"emoji": "🇬🇧", "title": "Líderes con potencial", "tags": ["Liderazgo demostrado", "Impacto social"]},
+                {"emoji": "💼", "title": "2.800+ Horas experiencia", "tags": ["Laboral / Voluntariado", "Post-bachelor"]},
+                {"emoji": "🗣️", "title": "Dominio del inglés", "tags": ["IELTS / TOEFL", "Comunicación directa"]}
+            ],
+            "testimonials": [
+                {"name": "Mateo Morales", "country": "🇧🇴 Bolivia", "year": "2023", "university": "London School of Economics (LSE)", "program": "Desarrollo Internacional", "quote": "Chevening no solo financió mi maestría en LSE, sino que me abrió puertas en redes globales de diplomacia y desarrollo.", "avatar": "MM"},
+                {"name": "Camila Vargas", "country": "🇧🇴 Bolivia", "year": "2022", "university": "University of Oxford", "program": "Políticas Públicas", "quote": "El proceso exige claridad en tus objetivos de liderazgo. EDULAB me guió paso a paso para estructurar mis ensayos.", "avatar": "CV"}
+            ],
+            "faq": [
+                {"question": "¿Las horas de voluntariado cuentan como experiencia?", "answer": "Sí, las horas de voluntariado en organizaciones formales post-titulación cuentan para completar las 2.800 horas requeridas."},
+                {"question": "¿Debo tener admisión universitaria antes de postular?", "answer": "No es obligatorio al momento de enviar la solicitud, pero debes elegir 3 programas en el Reino Unido y obtener al menos una oferta incondicional más adelante."},
+                {"question": "¿Es obligatorio el retorno a Bolivia?", "answer": "Sí, Chevening exige retornar a Bolivia por un mínimo de 2 años al finalizar la maestría para aplicar los conocimientos adquiridos."}
+            ]
+        },
+        {
+            "title": "Becas Fundación Carolina",
+            "slug": "fundacion-carolina-beca",
+            "type": "scholarship",
+            "organization": "Fundación Carolina (Sector público y privado español)",
+            "organization_name": "Fundación Carolina",
+            "country": "España",
+            "city": "Madrid, Barcelona, Valencia y varias ciudades de España",
+            "institution": "Universidades e Institutos de Investigación de España",
+            "level": "Posgrado / Doctorado",
+            "funding_type": "Total o Parcial",
+            "area": "Multidisciplinaria (Objetivos de Desarrollo Sostenible)",
+            "language": "Español",
+            "duration": "1 año académico",
+            "deadline": "2026-03-02",
+            "official_url": "https://www.fundacioncarolina.es",
+            "short_description": "Programa de becas iberoamericano gestionado desde España para profesionales latinoamericanos. La convocatoria ofrece 736 becas en 203 programas académicos alineados con los ODS.",
+            "description": "Programa de becas iberoamericano gestionado desde España, dirigido a profesionales latinoamericanos. La convocatoria ofrece 736 becas en 203 programas académicos, alineados con los Objetivos de Desarrollo Sostenible (ODS).\n\nNo se postula a la universidad directamente; se postula a través del portal de la Fundación Carolina seleccionando el programa específico del catálogo. Se pueden elegir hasta dos programas por convocatoria.\n\nSuele cubrir entre el 50% y 100% de matrícula, manutención mensual, seguro médico y, en muchos casos, pasajes aéreos.",
+            "eligibility": "Ciudadanía iberoamericana (Bolivia incluida), título universitario de licenciatura, excelente expediente académico y postulación a los programas del catálogo Carolina.",
+            "benefits": "Matrícula cubierta del 50% al 100%, estipendio mensual de manutención, seguro médico no farmacéutico y billetes de avión ida y vuelta.",
+            "slots": None,
+            "status": "approved",
+            "activities": [
+                "Estudios de posgrado o doctorado en universidades españolas 🇪🇸",
+                "Integración en la Red Iberoamericana de Becarios Carolina 🌐",
+                "Participación en seminarios y actividades sobre ODS 🌿"
+            ],
+            "requirements": [
+                "Ciudadanía de un país iberoamericano (Bolivia)",
+                "Título universitario de licenciatura",
+                "Excelente expediente académico destacado",
+                "Cumplir con los requisitos específicos del programa elegido",
+                "Postular únicamente mediante el portal oficial de Fundación Carolina"
+            ],
+            "benefits_json": [
+                "Matrícula del 50% al 100% financiada 💸",
+                "Pasajes aéreos internacionales ida y vuelta ✈️",
+                "Asignación mensual para manutención 💰",
+                "Seguro médico internacional 🛡️",
+                "Membresía en la Red de Exbecarios Carolina 🌐"
+            ],
+            "dates_info": "Posgrado: Enero a Marzo | Doctorado: Enero a Abril",
+            "support_ai": [
+                "Seleccionar las 2 mejores opciones del catálogo Carolina",
+                "Redactar carta de motivación para la Fundación",
+                "Optimizar CV según estándar europeo",
+                "Validación de requisitos y promedio académico"
+            ],
+            "facebook_url": "https://www.facebook.com/FundacionCarolina",
+            "instagram_url": "https://www.instagram.com/fundacioncarolina/",
+            "youtube_url": "https://www.youtube.com/@FundacionCarolinaES",
+            "video_url": "https://www.youtube.com/watch?v=carolina-video",
+            "image_url": "https://images.unsplash.com/photo-1543783207-ec64e4d95325?w=800&q=80",
+            "is_demo": False,
+            "ideal_profile": [
+                {"emoji": "🇪🇸", "title": "Licenciados de alto nivel", "tags": ["Título universitario", "Promedio destacado"]},
+                {"emoji": "🌿", "title": "Impacto en ODS", "tags": ["Desarrollo sostenible", "Compromiso Iberoamericano"]},
+                {"emoji": "🎯", "title": "Perfil definido", "tags": ["Máximo 2 programas", "Postulación directa portal"]}
+            ],
+            "testimonials": [
+                {"name": "Lucía Torrez", "country": "🇧🇴 Bolivia", "year": "2023", "university": "Universidad Complutense de Madrid", "program": "Periodismo Científico", "quote": "La Beca Carolina me permitió especializarme en España y conectar con profesionales de toda Iberoamérica.", "avatar": "LT"}
+            ],
+            "faq": [
+                {"question": "¿Debo postular directo a la universidad en España?", "answer": "No. La postulación se hace 100% a través del portal de la Fundación Carolina seleccionando hasta dos programas del catálogo."},
+                {"question": "¿Cubre el 100% de los gastos?", "answer": "Depende del convenio del programa. Muchas becas cubren el 100% de la matrícula y alojamiento, mientras que otras son cofinanciadas al 50-80%."}
+            ]
+        },
+        {
+            "title": "Becas Patiño (Bélgica y Suiza)",
+            "slug": "patino-beca",
+            "type": "scholarship",
+            "organization": "Fundación Simón I. Patiño",
+            "organization_name": "Fundación Patiño",
+            "country": "Bélgica y Suiza",
+            "city": "Ginebra, Lausana, Bruselas y otras ciudades",
+            "institution": "Universidades de Suiza y Bélgica",
+            "level": "Maestría",
+            "funding_type": "100% completa",
+            "area": "Multidisciplinaria (Excepto Medicina y Odontología)",
+            "language": "Francés / Inglés / Alemán",
+            "duration": "1 a 2 años",
+            "deadline": "2026-11-30",
+            "official_url": "https://patino.org/becas/",
+            "short_description": "Programa creado específicamente para profesionales bolivianos en áreas estratégicas para el desarrollo del país, para realizar maestrías en destacadas universidades de Bélgica y Suiza.",
+            "description": "Programa creado específicamente para bolivianos con el fin de formar profesionales de alto nivel en áreas estratégicas (excepto medicina y odontología) que contribuyan al desarrollo nacional.\n\nOfrece financiamiento 100% integral incluyendo colegiatura, estadía completa y pasajes internacionales. Exige compromiso formal de retorno a Bolivia por un mínimo de 3 años tras culminar los estudios.\n\nImportante: La beca es revocada si el estudiante no es admitido por la universidad de destino tras ganar la beca Patiño.",
+            "eligibility": "Profesionales bolivianos residentes en Bolivia, menores de 30 años (preferentemente), excelente promedio y nivel avanzado del idioma de instrucción (Francés, Inglés o Alemán).",
+            "benefits": "Matrícula completa, colegiatura, estadía integral (alojamiento y alimentación) y pasajes internacionales de ida y vuelta.",
+            "slots": None,
+            "status": "approved",
+            "activities": [
+                "Estudios de maestría en universidades de prestigio en Suiza o Bélgica 🇨🇭🇧🇪",
+                "Investigación y desarrollo de tesis orientada al progreso de Bolivia 🇧🇴",
+                "Retorno obligatorio a Bolivia para aplicar los conocimientos por 3 años 🤝"
+            ],
+            "requirements": [
+                "Nacionalidad boliviana y residencia actual en Bolivia",
+                "Menor de 30 años (preferentemente)",
+                "Título universitario de licenciatura con excelente promedio",
+                "Nivel avanzado del idioma de instrucción (Francés, Inglés o Alemán)",
+                "Compromiso de retorno a Bolivia por un periodo mínimo de 3 años",
+                "Exclusión: No aplica para medicina ni odontología"
+            ],
+            "benefits_json": [
+                "Matrícula y colegiatura 100% cubiertas 💸",
+                "Pasajes aéreos internacionales ida y vuelta ✈️",
+                "Estadía integral (alojamiento y manutención) 🏠",
+                "Seguro de salud internacional 🛡️",
+                "Acompañamiento institucional Fundación Patiño 🤝"
+            ],
+            "dates_info": "Convocatoria anual con cierre en Noviembre",
+            "support_ai": [
+                "Evaluación de promedio académico para estándar Patiño",
+                "Redacción de carta de motivación y compromiso con Bolivia",
+                "Preparación de postulaciones a universidades suizas/bélgicas",
+                "Simulacro de entrevista personal"
+            ],
+            "facebook_url": "https://www.facebook.com/FundacionPatino",
+            "instagram_url": "https://www.instagram.com/fundacionpatino/",
+            "youtube_url": "https://www.youtube.com/@FundacionPatino",
+            "video_url": "https://www.youtube.com/watch?v=patino-video",
+            "image_url": "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?w=800&q=80",
+            "is_demo": False,
+            "ideal_profile": [
+                {"emoji": "🇧🇴", "title": "Jóvenes residentes bolivianos", "tags": ["Residir en Bolivia", "Menores de 30 años"]},
+                {"emoji": "🇨🇭", "title": "Alto nivel de idiomas", "tags": ["Francés / Inglés / Alemán", "Promedio sobresaliente"]},
+                {"emoji": "📈", "title": "Compromiso de retorno", "tags": ["3 años en Bolivia", "Desarrollo nacional"]}
+            ],
+            "testimonials": [
+                {"name": "Gabriel Mendoza", "country": "🇧🇴 Bolivia", "year": "2022", "university": "EPFL Suiza", "program": "Ingeniería Ambiental", "quote": "La beca Patiño fue la llave para estudiar en una de las mejores politécnicas de Europa y aportar hoy a mi país.", "avatar": "GM"}
+            ],
+            "faq": [
+                {"question": "¿Puedo postular si estudio Medicina u Odontología?", "answer": "No. La Fundación Patiño excluye explícitamente medicina y odontología de esta convocatoria."},
+                {"question": "¿Qué pasa si no me admite la universidad?", "answer": "La beca es revocada si el seleccionado no logra obtener la carta de admisión oficial de la universidad de destino en Suiza o Bélgica."}
+            ]
+        },
+        {
+            "title": "Erasmus Mundus Joint Masters",
+            "slug": "erasmus-mundus-beca",
+            "type": "scholarship",
+            "organization": "Unión Europea (Agencia Ejecutiva EACEA)",
+            "organization_name": "Unión Europea",
+            "country": "Unión Europea (Múltiples países)",
+            "city": "Consorcio de universidades europeas",
+            "institution": "Universidades Consorcio Erasmus Mundus",
+            "level": "Maestría Conjunta",
+            "funding_type": "100% completa",
+            "area": "Multidisciplinaria",
+            "language": "Inglés",
+            "duration": "1 a 2 años académicos (12 a 24 meses)",
+            "deadline": "2027-01-31",
+            "official_url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en",
+            "short_description": "Programa estrella de la Unión Europea para maestrías conjuntas impartidas por consorcios de al menos tres universidades europeas con movilidad internacional obligatoria entre países.",
+            "description": "Programa estrella de la Unión Europea para maestrías conjuntas impartidas por consorcios de al menos tres universidades europeas. Ofrece experiencia multicultural única con movilidad obligatoria entre países.\n\nCubre un estipendio mensual de €1.400 (hasta €33.600 por 24 meses), matrícula completa, seguro médico internacional, gastos de viaje y costos de visa.\n\nEl estudiante debe elegir un programa del catálogo online de Erasmus Mundus y postular directamente al consorcio que lo imparte. Ideal para quienes buscan movilidad internacional sin límite de edad.",
+            "eligibility": "Graduados universitarios de cualquier país (Bolivia totalmente elegible), sin límite de edad, con título de licenciatura (o último año) y dominio de inglés B2/C1.",
+            "benefits": "Estipendio mensual de €1.400/mes (€33.600 total por 24 meses), matrícula 100% cubierta, seguro médico internacional, pasajes y costos de visa.",
+            "slots": None,
+            "status": "approved",
+            "activities": [
+                "Estudios en al menos 2 o 3 universidades europeas distintas 🇪🇺",
+                "Obtención de título múltiple o conjunto reconocido globalmente 🎓",
+                "Inmersión cultural y lingüística multicultural 🌍"
+            ],
+            "requirements": [
+                "Título de licenciatura (o estar cursando el último año)",
+                "Dominio de inglés certificado (B2 / C1 IELTS o TOEFL)",
+                "CV en formato Europass",
+                "Cartas de recomendación académicas o profesionales",
+                "Postulación directa al consorcio del catálogo Erasmus Mundus"
+            ],
+            "benefits_json": [
+                "Estipendio mensual de €1.400 / mes 💰",
+                "Matrícula universitaria 100% financiada 💸",
+                "Seguro de salud completo internacional 🛡️",
+                "Subsidio para viajes y costos de visa ✈️",
+                "Movilidad internacional garantizada en Europa 🇪🇺"
+            ],
+            "dates_info": "Cierres entre Noviembre 2026 y Febrero 2027",
+            "support_ai": [
+                "Búsqueda guiada en el catálogo de maestrías Erasmus Mundus",
+                "Construcción de CV Europass estandarizado",
+                "Redacción de Letter of Motivation por consorcio",
+                "Verificación de créditos ECTS y titulación"
+            ],
+            "facebook_url": "https://www.facebook.com/EUErasmusPlusProgrammes",
+            "instagram_url": "https://www.instagram.com/erasmus_mundus/",
+            "youtube_url": "https://www.youtube.com/@EUErasmusPlus",
+            "video_url": "https://www.youtube.com/watch?v=erasmus-video",
+            "image_url": "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&q=80",
+            "is_demo": False,
+            "ideal_profile": [
+                {"emoji": "🇪🇺", "title": "Estudiantes internacionales", "tags": ["Movilidad obligatoria", "Multiculturalidad"]},
+                {"emoji": "♾️", "title": "Sin límite de edad", "tags": ["Cualquier profesional", "Licenciatura lista"]},
+                {"emoji": "🎓", "title": "Título conjunto europeo", "tags": ["Consorcio 3+ universidades", "Prestigio global"]}
+            ],
+            "testimonials": [
+                {"name": "Alejandro Siles", "country": "🇧🇴 Bolivia", "year": "2023", "university": "Consorcio Francia - Italia - España", "program": "Nanotecnología", "quote": "Estudiar en tres países europeos durante mi maestría fue la experiencia académica más enriquecedora de mi vida.", "avatar": "AS"}
+            ],
+            "faq": [
+                {"question": "¿Hay límite de edad para Erasmus Mundus?", "answer": "No. Erasmus Mundus no tiene límite de edad para los postulantes."},
+                {"question": "¿Puedo postular si aún no tengo el título físico?", "answer": "Sí, siempre y cuando estés en tu último semestre y te gradúes antes del inicio oficial de las clases en Europa."}
+            ]
+        },
+        {
+            "title": "Global Korea Scholarship (GKS-G)",
+            "slug": "gks-korea-beca",
+            "type": "scholarship",
+            "organization": "Gobierno de Corea del Sur (NIIED)",
+            "organization_name": "Gobierno de Corea",
+            "country": "Corea del Sur",
+            "city": "Seúl, Busan, Incheon, Daejeon",
+            "institution": "Universidades de Corea del Sur",
+            "level": "Maestría / Doctorado",
+            "funding_type": "100% completa",
+            "area": "Multidisciplinaria",
+            "language": "Coreano / Inglés",
+            "duration": "3 años (1 año idioma + 2 años maestría)",
+            "deadline": "2026-02-28",
+            "official_url": "https://www.studyinkorea.go.kr/",
+            "short_description": "Beca integral del gobierno coreano para maestrías. Incluye un año obligatorio de inmersión en el idioma coreano antes de iniciar el programa académico en universidades de Corea del Sur.",
+            "description": "Beca integral otorgada por el gobierno de Corea del Sur (NIIED) que cubre pasajes aéreos, matrícula universitaria completa, estipendio mensual, seguro médico y un año de curso intensivo de idioma coreano antes de la maestría.\n\nEs una de las becas más completas disponibles para profesionales bolivianos interesados en estudiar en el continente asiático y vivir una experiencia tecnológica y cultural de vanguardia.",
+            "eligibility": "Nacionalidad boliviana (postulante y padres no coreanos), menor de 40 años al momento de postular, promedio académico superior al 80% (GPA equivalente) y salud física/mental óptima.",
+            "benefits": "Pasajes aéreos ida y vuelta, curso de coreano por 1 año, matrícula universitaria completa, asignación mensual de manutención, subsidio de impresión de tesis y seguro de salud.",
+            "slots": None,
+            "status": "approved",
+            "activities": [
+                "1 año intensivo de aprendizaje de idioma coreano 🇰🇷",
+                "Estudios de maestría en universidades líderes de Corea del Sur 🎓",
+                "Intercambio tecnológico, cultural e industrial 🔬"
+            ],
+            "requirements": [
+                "Nacionalidad boliviana (postulante y padres)",
+                "Menor de 40 años de edad al momento de postular",
+                "Título universitario de licenciatura",
+                "Promedio académico acumulado mínimo del 80% (o GPA 2.64/4.0)",
+                "Certificado médico oficial de salud óptima",
+                "Personal Statement y Study Plan en inglés o coreano"
+            ],
+            "benefits_json": [
+                "Matrícula universitaria 100% financiada 💸",
+                "1 año de curso intensivo de idioma coreano 🇰🇷",
+                "Pasajes aéreos internacionales ida y vuelta ✈️",
+                "Estipendio mensual de manutención 💰",
+                "Seguro médico e impresión de tesis 📄"
+            ],
+            "dates_info": "Convocatoria anual abierta en Febrero",
+            "support_ai": [
+                "Cálculo y certificación de promedio 80% / GPA",
+                "Redacción de Personal Statement y Study Plan GKS",
+                "Estrategia de postulación por vía Embajada vs Vía Universidad",
+                "Simulacro de entrevista de selección"
+            ],
+            "facebook_url": "https://www.facebook.com/studyinkorea",
+            "instagram_url": "https://www.instagram.com/studyinkorea_niied/",
+            "youtube_url": "https://www.youtube.com/@StudyinKoreaNIIED",
+            "video_url": "https://www.youtube.com/watch?v=gks-video",
+            "image_url": "https://images.unsplash.com/photo-1538485399081-7191377e8241?w=800&q=80",
+            "is_demo": False,
+            "ideal_profile": [
+                {"emoji": "🇰🇷", "title": "Pasión por Corea", "tags": ["Cultura e innovación", "Aprender coreano"]},
+                {"emoji": "📊", "title": "Promedio 80%+", "tags": ["Alto rendimiento", "Menor de 40 años"]},
+                {"emoji": "🌏", "title": "Visión Asia-Pacífico", "tags": ["Tecnología", "Intercambio global"]}
+            ],
+            "testimonials": [
+                {"name": "Valeria Choque", "country": "🇧🇴 Bolivia", "year": "2023", "university": "Seoul National University", "program": "Ingeniería de Software", "quote": "El año de idioma coreano fue desafiante y fascinante. GKS te da todo el respaldo para triunfar en Corea."}
+            ],
+            "faq": [
+                {"question": "¿Necesito saber coreano antes de postular?", "answer": "No. La beca incluye un año completo de curso de idioma coreano en Corea antes de empezar la maestría."},
+                {"question": "¿Cuál es la edad máxima para postular a maestría?", "answer": "Debes tener menos de 40 años al año de la postulación."}
+            ]
         }
     ]
 
@@ -315,6 +657,13 @@ async def seed_programs_db():
             org_uid = f"mock-{org_name.lower().replace(' ', '').replace('-', '')}-uid"
             
             org_id = await get_or_create_seed_org(db, org_name, org_email, org_uid)
+            # Convert deadline string to date object if present
+            if isinstance(seed_data.get("deadline"), str):
+                try:
+                    seed_data["deadline"] = datetime.datetime.strptime(seed_data["deadline"], "%Y-%m-%d").date()
+                except Exception:
+                    seed_data["deadline"] = None
+
             seed_data["organization_id"] = org_id
             
             result = await db.execute(
@@ -326,11 +675,12 @@ async def seed_programs_db():
                 db.add(new_program)
                 logger.info(f"Added seed program: '{seed_data['title']}' ({seed_data['slug']}) linked to Org ID {org_id}")
             else:
-                if existing.organization_id is None:
-                    existing.organization_id = org_id
+                for k, v in seed_data.items():
+                    setattr(existing, k, v)
+                existing.organization_id = org_id
                 existing.status = "approved"
                 db.add(existing)
-                logger.info(f"Ensured seed program: '{seed_data['title']}' ({seed_data['slug']}) is approved and linked to Org ID {existing.organization_id}")
+                logger.info(f"Ensured seed program: '{seed_data['title']}' ({seed_data['slug']}) is updated & approved linked to Org ID {existing.organization_id}")
         await db.commit()
     logger.info("🌱 Database programs/opportunities seeding finished successfully.")
 
