@@ -153,6 +153,73 @@ async def seed_programs_db():
             "is_demo": False
         },
         {
+            "title": "Voluntariado con TECHO (Sedes Internacionales)",
+            "description": "Voluntariado enfocado en el desarrollo comunitario y la construcción de viviendas de emergencia en asentamientos precarios. Los voluntarios trabajan junto a las familias para mejorar su entorno social.\n\nMás de 1.2 millones de jóvenes ya se sumaron a nuestro voluntariado. Somos una organización constituida por jóvenes que destinan fuerzas, tiempo y ganas a transformar la realidad de Latinoamérica, junto con las familias que habitan en asentamientos populares.\n\n¿Por qué ser voluntario/a?\nEl voluntariado es el motor de la organización, es la fuerza transformadora de la realidad en la que vivimos. Gracias a los voluntarios y voluntarias de TECHO, las familias de los barrios populares pueden vivir mejor.",
+            "type": "volunteering",
+            "organization": "TECHO Internacional / TECHO Bolivia",
+            "country": "Bolivia & Latinoamérica (18 países)",
+            "city": "La Paz, Santa Cruz, Cochabamba, Sucre, Tarija",
+            "institution": "TECHO Internacional / TECHO Bolivia",
+            "level": "Voluntariado Social & Desarrollo Comunitario",
+            "funding_type": "No financiado (Gastos de traslado y cuota logística mínima)",
+            "area": "Urbanismo Social & Reducción de Pobreza",
+            "language": "Español",
+            "duration": "Recurrente / Fines de semana",
+            "deadline": None,
+            "official_url": "https://techo.org/",
+            "eligibility": "Jóvenes bolivianos e internacionales interesados en el urbanismo social, trabajo comunitario de campo y reducción de la pobreza. Motivación por el trabajo de campo y capacidad de trabajo en equipo.",
+            "benefits": "Certificado oficial TECHO, desarrollo de competencias de liderazgo y trabajo de campo, integración comunitaria y red de más de 1.2 millones de voluntarios en Latinoamérica.",
+            "slots": 100,
+            "slug": "techo-voluntariado",
+            "organization_name": "TECHO",
+            "status": "approved",
+            "short_description": "Voluntariado enfocado en el desarrollo comunitario y la construcción de viviendas de emergencia en asentamientos precarios.",
+            "activities": [
+                "Construcciones de viviendas de emergencia los fines de semana 🏠",
+                "Trabajos continuos en asentamientos populares y equipos de soporte TECHO 🛠️",
+                "Voluntariado con colegios, grupos familiares y corporativo (RSE) 👥",
+                "Diagnóstico comunitario e inmersión social 📊"
+            ],
+            "requirements": [
+                "Motivación por el trabajo de campo comunitario",
+                "Capacidad de trabajo en equipo y adaptabilidad",
+                "Disponibilidad los fines de semana o jornadas de construcción",
+                "Cubrir gastos personales de traslado y cuota logística mínima"
+            ],
+            "benefits_json": [
+                "Transformación social directa en asentamientos populares 🏠",
+                "Formación en liderazgo social y trabajo comunitario 🧠",
+                "Red de +1.2 millones de voluntarios en 18 países de LATAM 🌍",
+                "Certificado oficial de voluntariado TECHO 📜"
+            ],
+            "dates_info": "Convocatoria abierta y recurrente durante todo el año",
+            "support_ai": [
+                "Orientación sobre las modalidades de voluntariado TECHO",
+                "Preparación de perfil de voluntario social",
+                "Coordinación de sedes de contacto en Bolivia (La Paz, Santa Cruz, Cochabamba, Sucre, Tarija)"
+            ],
+            "facebook_url": "https://www.facebook.com/TECHO.org",
+            "instagram_url": "https://www.instagram.com/techo_org/",
+            "youtube_url": "https://www.tiktok.com/@techo_latam",
+            "video_url": "https://www.tiktok.com/@techo_enbolivia/video/7522875353610587398",
+            "image_url": "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80",
+            "is_demo": False,
+            "ideal_profile": [
+                {"emoji": "🏠", "title": "Jóvenes Comprometidos", "tags": ["Construcción comunitaria", "Fines de semana"]},
+                {"emoji": "🇧🇴", "title": "Sedes en Bolivia", "tags": ["La Paz", "Santa Cruz", "Cochabamba", "Sucre", "Tarija"]},
+                {"emoji": "🤝", "title": "Trabajo en Equipo", "tags": ["Desarrollo social", "RSE Corporativo"]}
+            ],
+            "testimonials": [
+                {"name": "Emi Vrančić", "country": "🇧🇴 Bolivia", "year": "2024", "university": "TECHO Bolivia", "program": "Voluntariado Social", "quote": "La experiencia de construir junto a las familias de los asentamientos te cambia la perspectiva por completo.", "avatar": "EV"},
+                {"name": "Emanuel Buezo", "country": "🇧🇴 Bolivia", "year": "2024", "university": "TECHO Bolivia", "program": "Voluntariado Social", "quote": "Ser voluntario en TECHO es aportar energía y trabajo real para transformar vidas en nuestras comunidades.", "avatar": "EB"}
+            ],
+            "faq": [
+                {"question": "¿Cuáles son las formas de participar como voluntario/a?", "answer": "Puedes participar en construcciones de fines de semana, en equipos permanentes de trabajo, con tu colegio, en grupos de familia/amigos o mediante voluntariado corporativo (RSE)."},
+                {"question": "¿En qué ciudades de Bolivia está presente TECHO?", "answer": "TECHO trabaja en Bolivia desde 2009 con sedes en La Paz (2009), Santa Cruz (2012), y desde 2021 en Tarija, Cochabamba y Sucre."},
+                {"question": "¿El voluntariado requiere cuota?", "answer": "Es un voluntariado no financiado. El voluntario cubre sus gastos de traslado y una cuota logística mínima orientada al transporte y materiales."}
+            ]
+        },
+        {
             "title": "Voluntariado de Conservación Ambiental ONU",
             "description": "Apoyo en áreas protegidas para reforestación, educación ecológica y monitoreo de especies nativas.",
             "type": "volunteering",
