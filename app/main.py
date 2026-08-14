@@ -399,39 +399,40 @@ async def seed_programs_db():
             ]
         },
         {
-            "title": "Becas Patiño (Bélgica y Suiza)",
+            "title": "Becas Simón I. Patiño (Bélgica y Suiza)",
             "slug": "patino-beca",
             "type": "scholarship",
             "organization": "Fundación Simón I. Patiño",
             "organization_name": "Fundación Patiño",
             "country": "Bélgica y Suiza",
-            "city": "Ginebra, Lausana, Bruselas y otras ciudades",
-            "institution": "Universidades de Suiza y Bélgica",
+            "city": "Ginebra, Lausana, Bruselas, Berna y otras ciudades",
+            "institution": "Universidades de Suiza (UNIGE, UNIL, EPFL, BFH) y Bélgica (ULB, VUB)",
             "level": "Maestría",
-            "funding_type": "100% completa",
+            "funding_type": "100% integral",
             "area": "Multidisciplinaria (Excepto Medicina y Odontología)",
-            "language": "Francés / Inglés / Alemán",
+            "language": "Inglés (C1/TOEFL≥90) / Francés / Alemán",
             "duration": "1 a 2 años",
             "deadline": "2026-11-30",
             "official_url": "https://patino.org/becas/",
-            "short_description": "Programa creado específicamente para profesionales bolivianos en áreas estratégicas para el desarrollo del país, para realizar maestrías en destacadas universidades de Bélgica y Suiza.",
-            "description": "Programa creado específicamente para bolivianos con el fin de formar profesionales de alto nivel en áreas estratégicas (excepto medicina y odontología) que contribuyan al desarrollo nacional.\n\nOfrece financiamiento 100% integral incluyendo colegiatura, estadía completa y pasajes internacionales. Exige compromiso formal de retorno a Bolivia por un mínimo de 3 años tras culminar los estudios.\n\nImportante: La beca es revocada si el estudiante no es admitido por la universidad de destino tras ganar la beca Patiño.",
-            "eligibility": "Profesionales bolivianos residentes en Bolivia, menores de 30 años (preferentemente), excelente promedio y nivel avanzado del idioma de instrucción (Francés, Inglés o Alemán).",
-            "benefits": "Matrícula completa, colegiatura, estadía integral (alojamiento y alimentación) y pasajes internacionales de ida y vuelta.",
-            "slots": None,
+            "short_description": "Becas de maestría de financiamiento 100% integral en prestigiosas universidades de Suiza y Bélgica para profesionales bolivianos comprometidos con el desarrollo del país.",
+            "description": "A quienes encarnan la excelencia y el compromiso, la Fundación Patiño ofrece mucho más que apoyo: ofrece confianza.\n\nNuestras becas apoyan trayectorias profesionales prometedoras, tanto en Bolivia como a nivel internacional, para que cada talento pueda desarrollarse plenamente, con rigor, altos estándares y una sensación de recompensa.\n\nAprender es crecer. Transmitir el conocimiento es asegurar su impacto perdurable. Creemos que las mentes iluminadas, nutridas por el conocimiento y la responsabilidad, son las artífices de una Bolivia orgullosa, justa y radiante.\n\nOfrece financiamiento 100% integral incluyendo colegiatura, estadía completa y pasajes internacionales. Exige compromiso formal de retorno a Bolivia por un mínimo de 3 años tras culminar los estudios.",
+            "eligibility": "Tener nacionalidad boliviana, menos de 30 años, título universitario de licenciatura en Bolivia, promedio académico ≥80/100 (UNIGE, UNIL, ULB, VUB, BFH) o ≥90/100 (EPFL), buen nivel de inglés (C1 o TOEFL≥90) y un proyecto para el desarrollo de Bolivia.",
+            "benefits": "Matrícula completa, colegiatura, estadía integral (alojamiento y alimentación), seguro de salud y pasajes internacionales de ida y vuelta.",
+            "slots": 15,
             "status": "approved",
             "activities": [
-                "Estudios de maestría en universidades de prestigio en Suiza o Bélgica 🇨🇭🇧🇪",
-                "Investigación y desarrollo de tesis orientada al progreso de Bolivia 🇧🇴",
-                "Retorno obligatorio a Bolivia para aplicar los conocimientos por 3 años 🤝"
+                "Estudios de maestría en UNIGE, UNIL, EPFL, ULB, BFH o VUB en Suiza/Bélgica 🇨🇭🇧🇪",
+                "Desarrollo de proyecto de investigación enfocado en el desarrollo de Bolivia 🇧🇴",
+                "Retorno obligatorio a Bolivia por un mínimo de 3 años para aplicar el conocimiento 🤝"
             ],
             "requirements": [
-                "Nacionalidad boliviana y residencia actual en Bolivia",
-                "Menor de 30 años (preferentemente)",
-                "Título universitario de licenciatura con excelente promedio",
-                "Nivel avanzado del idioma de instrucción (Francés, Inglés o Alemán)",
-                "Compromiso de retorno a Bolivia por un periodo mínimo de 3 años",
-                "Exclusión: No aplica para medicina ni odontología"
+                "Tener nacionalidad boliviana",
+                "Tener menos de 30 años",
+                "Tener un título universitario boliviano (al menos licenciatura)",
+                "Calificación académica requerida: ≥80/100 (UNIGE, UNIL, ULB, VUB, BFH) o ≥90/100 (EPFL)",
+                "Buen conocimiento del inglés: Nivel C1 o TOEFL de al menos 90 puntos",
+                "Proyecto específico para contribuir al desarrollo de Bolivia",
+                "Exclusión explícita: No aplica para Medicina ni Odontología"
             ],
             "benefits_json": [
                 "Matrícula y colegiatura 100% cubiertas 💸",
@@ -442,10 +443,10 @@ async def seed_programs_db():
             ],
             "dates_info": "Convocatoria anual con cierre en Noviembre",
             "support_ai": [
-                "Evaluación de promedio académico para estándar Patiño",
-                "Redacción de carta de motivación y compromiso con Bolivia",
-                "Preparación de postulaciones a universidades suizas/bélgicas",
-                "Simulacro de entrevista personal"
+                "Evaluación y verificación de promedio académico (80/100 o 90/100)",
+                "Redacción de Carta de Motivación y Plan de Impacto para Bolivia",
+                "Asistencia en postulación a universidades suizas (UNIGE, UNIL, EPFL, BFH) y belgas (ULB, VUB)",
+                "Simulacro interactivo de entrevista institucional Patiño"
             ],
             "facebook_url": "https://www.facebook.com/FundacionPatino",
             "instagram_url": "https://www.instagram.com/fundacionpatino/",
@@ -454,16 +455,21 @@ async def seed_programs_db():
             "image_url": "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?w=800&q=80",
             "is_demo": False,
             "ideal_profile": [
-                {"emoji": "🇧🇴", "title": "Jóvenes residentes bolivianos", "tags": ["Residir en Bolivia", "Menores de 30 años"]},
-                {"emoji": "🇨🇭", "title": "Alto nivel de idiomas", "tags": ["Francés / Inglés / Alemán", "Promedio sobresaliente"]},
-                {"emoji": "📈", "title": "Compromiso de retorno", "tags": ["3 años en Bolivia", "Desarrollo nacional"]}
+                {"emoji": "🇧🇴", "title": "Nacionalidad Boliviana", "tags": ["Residente en Bolivia", "Menor de 30 años"]},
+                {"emoji": "🎓", "title": "Licenciatura y Excelencia", "tags": ["Título universitario", "Promedio ≥80/100 o ≥90/100"]},
+                {"emoji": "🌐", "title": "Dominio de Inglés C1", "tags": ["TOEFL ≥90 pts", "Inglés C1 / Idioma oficial"]},
+                {"emoji": "🚀", "title": "Proyecto para Bolivia", "tags": ["Desarrollo nacional", "Retorno 3 años"]}
             ],
             "testimonials": [
-                {"name": "Gabriel Mendoza", "country": "🇧🇴 Bolivia", "year": "2022", "university": "EPFL Suiza", "program": "Ingeniería Ambiental", "quote": "La beca Patiño fue la llave para estudiar en una de las mejores politécnicas de Europa y aportar hoy a mi país.", "avatar": "GM"}
+                {"name": "Gabriel Mendoza", "country": "🇧🇴 Bolivia", "year": "2022", "university": "EPFL Suiza", "program": "Ingeniería Ambiental", "quote": "La beca Patiño fue la llave para estudiar en una de las mejores politécnicas de Europa y aportar hoy a mi país.", "avatar": "GM"},
+                {"name": "Camila Vargas", "country": "🇧🇴 Bolivia", "year": "2023", "university": "UNIGE Suiza", "program": "Maestría en Biología Molecular", "quote": "El respaldo de la Fundación Patiño me permitió formarme al más alto nivel sin preocupaciones financieras.", "avatar": "CV"}
             ],
             "faq": [
-                {"question": "¿Puedo postular si estudio Medicina u Odontología?", "answer": "No. La Fundación Patiño excluye explícitamente medicina y odontología de esta convocatoria."},
-                {"question": "¿Qué pasa si no me admite la universidad?", "answer": "La beca es revocada si el seleccionado no logra obtener la carta de admisión oficial de la universidad de destino en Suiza o Bélgica."}
+                {"question": "¿Puedo postular si estudio Medicina u Odontología?", "answer": "No. La Fundación Patiño excluye explícitamente las carreras de medicina y odontología de sus convocatorias de beca."},
+                {"question": "¿Qué promedio necesito según la universidad?", "answer": "Necesitas un promedio mínimo de 80/100 para UNIGE, UNIL, ULB, VUB y BFH, y de al menos 90/100 para la EPFL (Lausanne)."},
+                {"question": "¿Qué nivel de inglés se requiere?", "answer": "Se exige un nivel C1 de inglés o un puntaje mínimo de 90 puntos en el examen TOEFL iBT, o el nivel avanzado en el idioma de impartición del programa."},
+                {"question": "¿Cuál es la consecuencia si la universidad no me admite?", "answer": "La beca Patiño queda sin efecto (revocada) si el estudiante seleccionado no logra obtener la carta de admisión formal de la universidad elegida en Suiza o Bélgica."},
+                {"question": "¿Cuál es el compromiso al finalizar los estudios?", "answer": "Existe el compromiso formal de retornar a Bolivia inmediatamente después de culminar los estudios para trabajar y aplicar los conocimientos durante un período mínimo de 3 años."}
             ]
         },
         {
