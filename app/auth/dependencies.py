@@ -23,7 +23,7 @@ async def get_current_user(
     token = credentials.credentials
 
     # Development Mock Bypass - ONLY allowed if MOCK_FIREBASE_AUTH is explicitly True
-    if settings.MOCK_FIREBASE_AUTH and (token.startswith("mock-") or not settings.FIREBASE_CREDENTIALS_PATH):
+    if settings.MOCK_FIREBASE_AUTH:
         role = "student"
         uid = token
         email = f"{token}@edulab.com"
@@ -41,6 +41,7 @@ async def get_current_user(
                 payload = json.loads(payload_json)
                 decoded_uid = payload.get("user_id") or payload.get("sub")
                 decoded_email = payload.get("email")
+                decoded_name = payload.get("name") or payload.get("full_name")
                 if decoded_uid and decoded_email:
                     uid = decoded_uid
                     email = decoded_email
@@ -74,7 +75,7 @@ async def get_current_user(
                 db, UserCreate(
                     firebase_uid=uid, 
                     email=email, 
-                    full_name=f"Mock {role.capitalize()}", 
+                    full_name=decoded_name if 'decoded_name' in locals() and decoded_name else f"Mock {role.capitalize()}", 
                     role=role
                 )
             )

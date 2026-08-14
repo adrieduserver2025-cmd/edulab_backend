@@ -1,6 +1,6 @@
 import datetime
 from typing import List, Optional, Dict, Any
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, status, Form, UploadFile, File
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 from pydantic import BaseModel
@@ -51,13 +51,14 @@ async def get_my_applications(
         for a, p in rows
     ]
 
-from typing import Dict, Any, Optional
+from typing import Dict, Any, Optional, List
 
 class ApplicationCreate(BaseModel):
     program_id: int
     status: Optional[str] = "pending"  # started or pending
     answers: Optional[list] = None
     uploaded_documents: Optional[dict] = None
+    motivation_letter_draft: Optional[str] = None
 
 @router.post("/", status_code=status.HTTP_201_CREATED)
 async def start_application(
@@ -181,6 +182,8 @@ async def start_application(
         app_record.status = target_status
         app_record.answers = payload.answers
         app_record.uploaded_documents = payload.uploaded_documents
+        if payload.motivation_letter_draft is not None:
+            app_record.motivation_letter_draft = payload.motivation_letter_draft
         
         # If moving to pending, set applied_at
         if target_status == "pending" and old_status != "pending":
@@ -207,7 +210,7 @@ async def start_application(
         program_id=payload.program_id,
         status=target_status,
         applied_at=now_time if target_status == "pending" else None,
-        motivation_letter_draft=None,
+        motivation_letter_draft=payload.motivation_letter_draft,
         ai_review_feedback=None,
         answers=payload.answers,
         uploaded_documents=payload.uploaded_documents
@@ -482,3 +485,312 @@ async def delete_application(
     await db.delete(app_record)
     await db.commit()
     return {"detail": "Postulación eliminada con éxito."}
+
+
+@router.get("/{id}")
+async def get_application_by_id(
+    id: int,
+    current_user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db)
+):
+    """
+    Retrieves full details of a single application by ID.
+    Accessible by Admin, the student who owns it, or the organization owning the program.
+    """
+    result = await db.execute(
+        select(Application, StudentProfile, Program)
+        .join(StudentProfile, Application.student_profile_id == StudentProfile.id)
+        .join(Program, Application.program_id == Program.id)
+        .where(Application.id == id)
+    )
+    row = result.first()
+    if not row:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Postulación no encontrada."
+        )
+        
+    app_record, student_profile, program = row
+    
+    # Check permissions
+    is_admin = current_user.role == "admin"
+    is_student_owner = student_profile.user_id == current_user.id
+    
+    is_org_owner = False
+    if current_user.role == "organization":
+        from app.organizations.models import Organization
+        org_res = await db.execute(select(Organization).where(Organization.user_id == current_user.id))
+        org = org_res.scalars().first()
+        if org and program.organization_id == org.id:
+            is_org_owner = True
+            
+    if not (is_admin or is_student_owner or is_org_owner):
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="No tienes permiso para ver esta postulación."
+        )
+        
+    return {
+        "id": app_record.id,
+        "student_profile_id": app_record.student_profile_id,
+        "program_id": app_record.program_id,
+        "status": app_record.status,
+        "applied_at": app_record.applied_at.isoformat() if app_record.applied_at else None,
+        "created_at": app_record.created_at.isoformat() if app_record.created_at else None,
+        "updated_at": app_record.updated_at.isoformat() if app_record.updated_at else None,
+        "motivation_letter_draft": app_record.motivation_letter_draft,
+        "ai_review_feedback": app_record.ai_review_feedback,
+        "answers": app_record.answers or [],
+        "uploaded_documents": app_record.uploaded_documents or {},
+        "program_title": program.title,
+        "program_slug": program.slug,
+        "program_type": program.type,
+        "program_organization": program.organization
+    }
+
+
+@router.post("/{id}/ai-review")
+async def run_application_ai_review(
+    id: int,
+    current_user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db)
+):
+    """
+    Triggers AI review/analysis for the application's CV (profile) and cover letter (motivation letter).
+    Compares it with other winners (accepted applications) for the same program or program type.
+    """
+    import json
+    from sqlalchemy.orm import selectinload
+    
+    # 1. Fetch application, profile and program
+    result = await db.execute(
+        select(Application, StudentProfile, Program)
+        .join(StudentProfile, Application.student_profile_id == StudentProfile.id)
+        .join(Program, Application.program_id == Program.id)
+        .where(Application.id == id)
+    )
+    row = result.first()
+    if not row:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Postulación no encontrada."
+        )
+        
+    app_record, student_profile, program = row
+    
+    # 2. Check permissions (only owner student or admin)
+    is_admin = current_user.role == "admin"
+    is_student_owner = student_profile.user_id == current_user.id
+    if not (is_admin or is_student_owner):
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="No tienes permiso para solicitar la revisión por IA de esta postulación."
+        )
+        
+    # 3. Find other "winners" (accepted applications)
+    # First look in the same program
+    winners_res = await db.execute(
+        select(Application)
+        .options(selectinload(Application.student_profile))
+        .where(
+            Application.program_id == program.id,
+            Application.status == "accepted",
+            Application.id != app_record.id
+        )
+    )
+    winners = winners_res.scalars().all()
+    
+    # If no winners found in the same program, fall back to accepted applications of the same program type
+    if not winners:
+        winners_fallback_res = await db.execute(
+            select(Application)
+            .join(Program, Application.program_id == Program.id)
+            .options(selectinload(Application.student_profile))
+            .where(
+                Program.type == program.type,
+                Application.status == "accepted",
+                Application.id != app_record.id
+            )
+        )
+        winners = [r for r in winners_fallback_res.scalars().all()]
+        
+    # 4. Generate AI review using the ai_service
+    from app.applications.ai_service import generate_ai_review
+    
+    motivation_letter = app_record.motivation_letter_draft or student_profile.general_motivation_letter
+    
+    review_feedback = await generate_ai_review(
+        program=program,
+        profile=student_profile,
+        motivation_letter=motivation_letter,
+        winners=winners
+    )
+    
+    # 5. Save report back to database
+    app_record.ai_review_feedback = json.dumps(review_feedback, ensure_ascii=False)
+    await db.commit()
+    await db.refresh(app_record)
+    
+    return review_feedback
+
+
+class DirectAIReviewPayload(BaseModel):
+    program_id: int
+    cv_text: str
+    motivation_letter: str
+
+@router.post("/direct-ai-review")
+async def run_direct_ai_review(
+    payload: DirectAIReviewPayload,
+    db: AsyncSession = Depends(get_db)
+):
+    """
+    Runs direct AI review/analysis on arbitrary CV text and motivation letter inputs.
+    Does not require creating or editing an application record in the database.
+    """
+    from sqlalchemy.orm import selectinload
+    
+    # 1. Fetch program
+    program_result = await db.execute(
+        select(Program).where(Program.id == payload.program_id)
+    )
+    program = program_result.scalars().first()
+    if not program:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Programa/Oportunidad no encontrado."
+        )
+
+    # 2. Fetch winners (accepted applications) for comparison
+    winners_res = await db.execute(
+        select(Application)
+        .options(selectinload(Application.student_profile))
+        .where(
+            Application.program_id == program.id,
+            Application.status == "accepted"
+        )
+    )
+    winners = winners_res.scalars().all()
+    
+    # Fallback to same program type if no winners in this specific program
+    if not winners:
+        winners_fallback_res = await db.execute(
+            select(Application)
+            .join(Program, Application.program_id == Program.id)
+            .options(selectinload(Application.student_profile))
+            .where(
+                Program.type == program.type,
+                Application.status == "accepted"
+            )
+        )
+        winners = [r for r in winners_fallback_res.scalars().all()]
+
+    # 3. Call AI review using raw string CV and cover letter
+    from app.applications.ai_service import generate_ai_review
+    
+    review_feedback = await generate_ai_review(
+        program=program,
+        profile=payload.cv_text,
+        motivation_letter=payload.motivation_letter,
+        winners=winners
+    )
+    
+    return review_feedback
+
+
+@router.post("/direct-ai-review-file")
+async def run_direct_ai_review_file(
+    program_id: int = Form(...),
+    motivation_letter: str = Form(...),
+    cv_file: UploadFile = File(...),
+    db: AsyncSession = Depends(get_db)
+):
+    """
+    Runs direct AI review/analysis on an uploaded CV file (.pdf, .txt, .md) and cover letter.
+    Does not require creating or editing an application record in the database.
+    """
+    # 1. Fetch program
+    program_result = await db.execute(
+        select(Program).where(Program.id == program_id)
+    )
+    program = program_result.scalars().first()
+    if not program:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Programa/Oportunidad no encontrado."
+        )
+
+    # 2. Extract CV text from uploaded file
+    cv_text = ""
+    filename = cv_file.filename or ""
+    if filename.lower().endswith(".pdf"):
+        try:
+            import pypdf
+            # Read PDF directly from stream
+            reader = pypdf.PdfReader(cv_file.file)
+            text_parts = []
+            for page in reader.pages:
+                text_parts.append(page.extract_text() or "")
+            cv_text = "\n".join(text_parts).strip()
+        except Exception as e:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail=f"No se pudo extraer texto del PDF del CV: {str(e)}"
+            )
+    elif filename.lower().endswith((".txt", ".md")):
+        try:
+            content = await cv_file.read()
+            cv_text = content.decode("utf-8").strip()
+        except Exception as e:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail=f"No se pudo leer el archivo de texto del CV: {str(e)}"
+            )
+    else:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Formato de archivo de CV no soportado. Por favor sube un archivo .pdf, .txt o .md."
+        )
+
+    if not cv_text:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="El archivo del CV está vacío o no contiene texto legible."
+        )
+
+    # 3. Fetch winners (accepted applications) for comparison
+    from sqlalchemy.orm import selectinload
+    winners_res = await db.execute(
+        select(Application)
+        .options(selectinload(Application.student_profile))
+        .where(
+            Application.program_id == program.id,
+            Application.status == "accepted"
+        )
+    )
+    winners = winners_res.scalars().all()
+    
+    # Fallback to same program type if no winners in this specific program
+    if not winners:
+        winners_fallback_res = await db.execute(
+            select(Application)
+            .join(Program, Application.program_id == Program.id)
+            .options(selectinload(Application.student_profile))
+            .where(
+                Program.type == program.type,
+                Application.status == "accepted"
+            )
+        )
+        winners = [r for r in winners_fallback_res.scalars().all()]
+
+    # 4. Call AI review
+    from app.applications.ai_service import generate_ai_review
+    review_feedback = await generate_ai_review(
+        program=program,
+        profile=cv_text,
+        motivation_letter=motivation_letter,
+        winners=winners
+    )
+    
+    return review_feedback
+

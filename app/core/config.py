@@ -47,6 +47,11 @@ class Settings(BaseSettings):
     DEV_MODE: bool = True
     MOCK_FIREBASE_AUTH: bool = False
 
+    # OpenAI Settings
+    OPENAI_API_KEY: str | None = None
+    OPENAI_MODEL: str = "gpt-4o-mini"
+
+
     @field_validator("DATABASE_URL")
     @classmethod
     def assemble_db_connection(cls, v: str) -> str:
