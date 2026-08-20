@@ -673,6 +673,1015 @@ async def seed_programs_db():
                 {"question": "¿Necesito saber coreano antes de postular?", "answer": "No. La beca incluye un año completo de curso de idioma coreano en Corea antes de empezar la maestría."},
                 {"question": "¿Cuál es la edad máxima para postular a maestría?", "answer": "Debes tener menos de 40 años al año de la postulación."}
             ]
+        },
+        {
+            "title": "Beca Monbukagakusho (MEXT) - Undergraduate Students",
+            "slug": "mext-japon-beca",
+            "type": "scholarship",
+            "organization": "Gobierno del Japón (Ministerio de Educación - MEXT)",
+            "organization_name": "MEXT Japón",
+            "country": "Japón",
+            "city": "Tokio / Universidades Nacionales",
+            "institution": "Universidades Nacionales de Japón",
+            "level": "Pregrado (Licenciatura)",
+            "funding_type": "100% completa",
+            "area": "Todas las áreas del conocimiento",
+            "language": "Japonés / Inglés",
+            "duration": "5 años (1 año idioma + 4 años carrera)",
+            "deadline": "2026-05-25",
+            "official_url": "https://www.bo.emb-japan.go.jp/itpr_es/becas-pregrado.html",
+            "short_description": "El programa de becas más prestigioso del Gobierno del Japón. Ofrece formación académica rigurosa con 1 año de idioma y carrera completa en universidades nacionales.",
+            "description": "Es el programa de becas más prestigioso del Gobierno del Japón. Ofrece formación académica rigurosa que comienza con un año intensivo de idioma japonés y cultura, seguido de la carrera universitaria completa en universidades nacionales de alto nivel.\n\nCubre el 100% de la matrícula, pasajes aéreos ida y vuelta, estipendio mensual de manutención y exención de tasas de examen de ingreso a la universidad.",
+            "eligibility": "Bachilleres bolivianos entre 17 y 24 años con excelente rendimiento académico y disposición para aprender idioma japonés desde cero.",
+            "benefits": "Matrícula completa, pasajes aéreos ida y vuelta, estipendio mensual de manutención, exención de tasas de examen de ingreso.",
+            "slots": 10,
+            "status": "approved",
+            "activities": [
+                "1 año de estudio intensivo de idioma y cultura japonesa 🇯🇵",
+                "4 años de carrera universitaria completa 🎓",
+                "Exámenes y prácticas en universidades nacionales de Japón 🔬",
+                "Inmersión cultural y académica 🌸"
+            ],
+            "requirements": [
+                "Nacionalidad boliviana",
+                "Edad entre 17 y 24 años al momento de postular",
+                "Bachillerato concluido con excelente rendimiento académico",
+                "Disposición para aprender el idioma japonés desde cero",
+                "Exámenes escritos (matemáticas, inglés, japonés) y entrevista presencial en Embajada"
+            ],
+            "benefits_json": [
+                "100% Matrícula universitaria cubierta 💸",
+                "Pasajes aéreos ida y vuelta ✈️",
+                "Estipendio mensual de manutención",
+                "1 año de curso intensivo de japonés 🗣",
+                "Exención de tasas de examen de ingreso"
+            ],
+            "dates_info": "Convocatoria 2026 para inicio en abril 2027 (cierre habitual en mayo vía Embajada del Japón en La Paz)",
+            "support_ai": [
+                "Simulador de entrevista presencial con la Embajada del Japón",
+                "Plan de estudios y guías para exámenes escritos de matemáticas e inglés",
+                "Redacción de carta de motivación"
+            ],
+            "facebook_url": "https://www.bo.emb-japan.go.jp",
+            "instagram_url": "https://www.instagram.com/japan_emb_bolivia",
+            "youtube_url": "https://www.youtube.com/@MEXT_Japan",
+            "video_url": "https://www.youtube.com/watch?v=mext-japan",
+            "image_url": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=800&q=80",
+            "is_demo": False,
+            "ideal_profile": [
+                {"emoji": "🇯🇵", "title": "Pasión por Japón", "tags": ["Aprender japonés", "Cultura nipona"]},
+                {"emoji": "📊", "title": "Excelencia Académica", "tags": ["17 a 24 años", "Matemáticas e Inglés"]},
+                {"emoji": "🎓", "title": "Grado Completo", "tags": ["5 años de estudio", "Universidades Nacionales"]}
+            ],
+            "testimonials": [
+                {"name": "Kenji Arakaki", "country": "🇧🇴 Bolivia", "year": "2023", "university": "University of Tokyo", "program": "Ingeniería de Sistemas", "quote": "El año de idioma en Tokio fue intenso pero te prepara perfectamente para afrontar la carrera en Japón."}
+            ],
+            "faq": [
+                {"question": "¿Necesito saber japonés antes de postular?", "answer": "No. La beca incluye un año intensivo de idioma japonés desde nivel principiante."},
+                {"question": "¿Dónde se rinden los exámenes?", "answer": "Los exámenes escritos y la entrevista personal se realizan presencialmente en la Embajada del Japón en La Paz."}
+            ]
+        },
+        {
+            "title": "Beca Türkiye Burslari",
+            "slug": "turkiye-burslari-beca",
+            "type": "scholarship",
+            "organization": "Presidencia para los Turcos en el Extranjero y Comunidades Afines (YTB)",
+            "organization_name": "Gobierno de Turquía",
+            "country": "Turquía",
+            "city": "Estambul, Ankara, Izmir",
+            "institution": "Universidades Públicas de Turquía",
+            "level": "Pregrado, Maestría y Doctorado",
+            "funding_type": "100% completa",
+            "area": "Multidisciplinaria",
+            "language": "Turco / Inglés",
+            "duration": "1 año turco + duración del programa (Licenciatura 4 años, Maestría 1-2 años, Doctorado 4 años)",
+            "deadline": "2027-02-20",
+            "official_url": "https://www.turkiyeburslari.gov.tr",
+            "short_description": "Beca 100% integral del Gobierno de Turquía que incluye colocación universitaria, curso de turco gratuito de 1 año, alojamiento en residencia, estipendio mensual y pasajes.",
+            "description": "Beca del gobierno turco dirigida a estudiantes internacionales. Incluye colocación universitaria automática, curso de turco gratuito de un año, alojamiento en residencia, estipendio mensual, pasajes de avión ida y vuelta y seguro médico.\n\nAplicación 100% online en el portal TBBS. Es una de las becas más completas de Europa/Asia para postulantes bolivianos sin requisito previo de idioma.",
+            "eligibility": "Pregrado: menores de 21 años con promedio mínimo 70%. Maestría: menores de 30 años con promedio mínimo 75%. Doctorado: menores de 35 años con promedio mínimo 75%.",
+            "benefits": "Matrícula completa, alojamiento universitario gratuito, estipendio mensual (4.500 TL pregrado / 6.500 TL maestría / 9.000 TL doctorado), pasajes ida y vuelta, seguro médico y curso de turco.",
+            "slots": 20,
+            "status": "approved",
+            "activities": [
+                "1 año de curso de idioma turco gratuito 🇹🇷",
+                "Estudios universitarios de licenciatura, maestría o doctorado 🎓",
+                "Intercambio cultural y actividades comunitarias YTB 🤝"
+            ],
+            "requirements": [
+                "70% mínimo académico para Pregrado / 75% mínimo para Posgrado",
+                "Límite de edad según nivel (Pregrado <21, Maestría <30, Doctorado <35)",
+                "Carta de motivación obligatoria en portal TBBS",
+                "No requiere certificado de idioma previo para programas en turco"
+            ],
+            "benefits_json": [
+                "100% Matrícula y colocación universitaria 💸",
+                "Residencia universitaria gratuita 🏠",
+                "Estipendio mensual de 4.500 TL (Pregrado) / 6.500 TL (Maestría) / 9.000 TL (Doctorado)",
+                "Pasajes aéreos internacionales ida y vuelta ✈️",
+                "Seguro médico e inmersión en idioma turco 🇹🇷"
+            ],
+            "dates_info": "Convocatoria anual: Del 10 de Enero al 20 de Febrero de cada año",
+            "support_ai": [
+                "Redacción de Carta de Motivación para TBBS",
+                "Selección inteligente de universidades y ciudades en Turquía",
+                "Simulador de entrevista online YTB"
+            ],
+            "facebook_url": "https://www.facebook.com/turkiyeburslari",
+            "instagram_url": "https://www.instagram.com/turkiyeburslari",
+            "youtube_url": "https://www.youtube.com/@turkiyeburslari",
+            "video_url": "https://www.youtube.com/watch?v=turkiye-burslari",
+            "image_url": "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&q=80",
+            "is_demo": False,
+            "ideal_profile": [
+                {"emoji": "🇹🇷", "title": "Estudiantes Globales", "tags": ["Pregrado y Posgrado", "Sin idioma previo"]},
+                {"emoji": "🏠", "title": "Alojamiento Cubierto", "tags": ["Residencia universitaria", "Estipendio mensual"]},
+                {"emoji": "🌐", "title": "Proceso 100% Online", "tags": ["Portal TBBS", "Multidisciplinario"]}
+            ],
+            "testimonials": [
+                {"name": "Mateo Morales", "country": "🇧🇴 Bolivia", "year": "2023", "university": "Istanbul University", "program": "Relaciones Internacionales", "quote": "La beca te cubre todo y Turquía es un puente cultural increíble para estudiar."}
+            ],
+            "faq": [
+                {"question": "¿Es necesario hablar turco antes de postular?", "answer": "No. La beca incluye un año completo de curso de idioma turco gratuito antes de iniciar tus estudios académicos."},
+                {"question": "¿Cómo se realiza la postulación?", "answer": "La aplicación es 100% online a través del sistema oficial TBBS (Turkiye Burslari)."}]
+        },
+        {
+            "title": "Stipendium Hungaricum Scholarship",
+            "slug": "stipendium-hungaricum-beca",
+            "type": "scholarship",
+            "organization": "Gobierno de Hungría (Fundación Pública Tempus)",
+            "organization_name": "Gobierno de Hungría",
+            "country": "Hungría",
+            "city": "Budapest, Debrecen, Szeged, Pécs",
+            "institution": "30+ Universidades de Hungría",
+            "level": "Pregrado, Maestría y Doctorado",
+            "funding_type": "100% completa",
+            "area": "Más de 900 programas académicos",
+            "language": "Inglés (B2) / Húngaro",
+            "duration": "2 a 4 años según nivel (Licenciatura 3-4, Maestría 1-2, Doctorado 4)",
+            "deadline": "2027-01-15",
+            "official_url": "https://www.stipendiumhungaricum.hu",
+            "short_description": "Programa estrella del gobierno húngaro para educación superior. Bolivia es elegible vía SEGIB con más de 900 programas en inglés.",
+            "description": "Programa estrella del gobierno húngaro para internacionalizar la educación superior. Bolivia es elegible a través del marco SEGIB (Secretaría General Iberoamericana), con 30+ universidades participantes y más de 900 programas en inglés.\n\nCubre matrícula completa, estipendio mensual, alojamiento o subsidio para él y seguro médico básico.",
+            "eligibility": "Ciudadanía boliviana (marco SEGIB); título previo según nivel; certificado de idioma (inglés B2 o húngaro); admisión en hasta 2 elecciones del catálogo.",
+            "benefits": "Matrícula completa, estipendio mensual, residencia universitaria o subsidio de alquiler, seguro médico de cobertura nacional.",
+            "slots": 15,
+            "status": "approved",
+            "activities": [
+                "Estudios universitarios de grado o posgrado en inglés 🇪🇺",
+                "Investigación y laboratorios de vanguardia en Hungría 🔬",
+                "Movilidad estudiantil en la Unión Europea 🌍"
+            ],
+            "requirements": [
+                "Ciudadanía boliviana elegible vía SEGIB",
+                "Título académico previo según nivel",
+                "Certificado de idioma inglés B2 mínimo (algunos programas no exigen IELTS)",
+                "Aplicación online a máximo 2 elecciones en portal apply.stipendiumhungaricum.hu"
+            ],
+            "benefits_json": [
+                "100% Matrícula universitaria exenta 💸",
+                "Estipendio mensual de manutención",
+                "Residencia universitaria o subsidio de alojamiento 🏠",
+                "Seguro médico nacional húngaro 🏥"
+            ],
+            "dates_info": "Convocatoria anual: Cierre el 15 de Enero a las 14:00 CET",
+            "support_ai": [
+                "Selección de las 2 opciones universitarias óptimas",
+                "Redacción de Carta de Motivación en inglés",
+                "Verificación de exenciones de examen de idioma"
+            ],
+            "facebook_url": "https://www.facebook.com/stipendiumhungaricum",
+            "instagram_url": "https://www.instagram.com/stipendiumhungaricum",
+            "youtube_url": "https://www.youtube.com/@stipendiumhungaricum",
+            "video_url": "https://www.youtube.com/watch?v=hungary-stipendium",
+            "image_url": "https://images.unsplash.com/photo-1516550893923-42d28e5677af?w=800&q=80",
+            "is_demo": False,
+            "ideal_profile": [
+                {"emoji": "🇭🇺", "title": "Estudios en Europa", "tags": ["900+ Programas", "Clases en Inglés"]},
+                {"emoji": "🇧🇴", "title": "Elegibilidad Bolivia", "tags": ["Convenio SEGIB", "Licenciatura y Posgrado"]},
+                {"emoji": "💶", "title": "Financiación Total", "tags": ["Matrícula", "Estipendio", "Alojamiento"]}
+            ],
+            "testimonials": [
+                {"name": "Lucía Fernández", "country": "🇧🇴 Bolivia", "year": "2023", "university": "Eötvös Loránd University (ELTE)", "program": "Maestría en Biotecnología", "quote": "Hungría ofrece una calidad académica excelente en Europa y la beca cubre tus gastos holgadamente."}
+            ],
+            "faq": [
+                {"question": "¿Bolivia califica a la Beca Stipendium Hungaricum?", "answer": "Sí, Bolivia forma parte de los países elegibles mediante el acuerdo marco SEGIB."},
+                {"question": "¿A cuántas carreras puedo aplicar?", "answer": "Puedes seleccionar un máximo de 2 opciones académicas en el portal oficial."}]
+        },
+        {
+            "title": "Chevening Scholarships",
+            "slug": "chevening-uk-beca",
+            "type": "scholarship",
+            "organization": "Gobierno del Reino Unido (FCDO)",
+            "organization_name": "Gobierno del Reino Unido",
+            "country": "Reino Unido",
+            "city": "Londres, Edimburgo, Manchester, Oxford, Cambridge",
+            "institution": "Cualquier Universidad del Reino Unido",
+            "level": "Maestría (1 año)",
+            "funding_type": "100% completa",
+            "area": "Todas las áreas del conocimiento",
+            "language": "Inglés (TOEFL/IELTS)",
+            "duration": "1 año académico (12 meses)",
+            "deadline": "2026-10-07",
+            "official_url": "https://www.chevening.org",
+            "short_description": "Programa de élite del gobierno británico para maestrías de 1 año en el Reino Unido. Cubre matrícula completa, estipendio de £1.690/mes, vuelos y visa.",
+            "description": "Programa de élite del gobierno británico que busca profesionales bolivianos con alto potencial de liderazgo y compromiso social para realizar una maestría de un año en cualquier universidad del Reino Unido.\n\nCubre matrícula completa, estipendio mensual (£1.690 en Londres / £1.378 fuera de Londres), pasajes aéreos ida y vuelta, costo de visa y asignación de llegada (£1.236) y despedida (£619). Valor estimado superior a £30.000.",
+            "eligibility": "Ciudadanía boliviana; título universitario equivalente a 2:1 británico; mínimo 2.800 horas (aprox 2 años) de experiencia laboral o voluntariado; compromiso de retorno por 2 años.",
+            "benefits": "Matrícula completa, estipendio mensual, pasajes internacionales, visa, asignación de llegada (£1.236) y despedida (£619).",
+            "slots": 8,
+            "status": "approved",
+            "activities": [
+                "Maestría de 1 año en universidad británica de prestigio 🇬🇧",
+                "Talleres y conferencias de liderazgo FCDO 🤝",
+                "Conexión con red global de becarios Chevening 🌍"
+            ],
+            "requirements": [
+                "Ciudadanía boliviana",
+                "Título universitario de licenciatura",
+                "Mínimo 2.800 horas de experiencia laboral o voluntariado comprobable",
+                "Cumplir requisito de inglés oficial",
+                "Compromiso de retorno a Bolivia por un mínimo de 2 años tras la beca"
+            ],
+            "benefits_json": [
+                "Matrícula universitaria 100% financiada (sin tope en la mayoría de programas) 💸",
+                "Estipendio mensual de £1.690 (Londres) / £1.378 (resto del Reino Unido)",
+                "Pasajes aéreos ida y vuelta en clase económica ✈️",
+                "Costo de visa de estudiante cubierto",
+                "Asignación de llegada (£1.236) y de salida (£619)"
+            ],
+            "dates_info": "Convocatoria anual: Abre en Agosto y cierra el 7 de Octubre",
+            "support_ai": [
+                "Redacción y pulido de los 4 Ensayos Chevening (Leadership, Networking, Studying in UK, Career Plan)",
+                "Cálculo de horas de experiencia profesional y voluntariado",
+                "Simulador de entrevista presencial con Embajada Británica"
+            ],
+            "facebook_url": "https://www.facebook.com/cheveningfcdo",
+            "instagram_url": "https://www.instagram.com/cheveningfcdo",
+            "youtube_url": "https://www.youtube.com/@cheveningfcdo",
+            "video_url": "https://www.youtube.com/watch?v=chevening-video",
+            "image_url": "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&q=80",
+            "is_demo": False,
+            "ideal_profile": [
+                {"emoji": "🇬🇧", "title": "Liderazgo Destacado", "tags": ["Potencial social", "Red de contactos"]},
+                {"emoji": "💼", "title": "2+ Años Experiencia", "tags": ["2.800 horas laborales", "Voluntariado suma"]},
+                {"emoji": "🎓", "title": "Maestría de 1 Año", "tags": ["UK Universities", "100% Financiada"]}
+            ],
+            "testimonials": [
+                {"name": "Sebastián Arze", "country": "🇧🇴 Bolivia", "year": "2023", "university": "LSE (London School of Economics)", "program": "MSc Public Policy", "quote": "Chevening no solo paga tus estudios en UK, te forma como líder transformador para Bolivia."}
+            ],
+            "faq": [
+                {"question": "¿Las horas de voluntariado cuentan como experiencia laboral?", "answer": "Sí. Las horas de voluntariado formalmente certificado suman dentro de las 2.800 horas requeridas."},
+                {"question": "¿Debo regresar a Bolivia al terminar la maestría?", "answer": "Sí. Existe el compromiso de retornar a Bolivia por al menos 2 años tras culminar la beca."}]
+        },
+        {
+            "title": "Beca OEA - GCUB (Brasil)",
+            "slug": "oea-gcub-brasil-beca",
+            "type": "scholarship",
+            "organization": "OEA & Grupo de Cooperación Internacional de Universidades Brasileñas (GCUB)",
+            "organization_name": "OEA / GCUB",
+            "country": "Brasil",
+            "city": "San Pablo, Río de Janeiro, Brasilia",
+            "institution": "50+ Universidades Brasileñas",
+            "level": "Maestría y Doctorado",
+            "funding_type": "100% completa (Matrícula + Estipendio)",
+            "area": "Todas las áreas académicas",
+            "language": "Portugués / Español",
+            "duration": "Hasta 24 meses (2 años)",
+            "deadline": "2026-07-31",
+            "official_url": "https://www.gcub.org.br/",
+            "short_description": "Alianza de movilidad de la OEA con 50+ universidades brasileñas. Exención total de matrícula y estipendio mensual para maestrías y doctorados.",
+            "description": "Una de las alianzas de movilidad académica más grandes de la región. Permite a profesionales bolivianos realizar maestrías en más de 50 universidades brasileñas en casi todas las áreas del conocimiento.\n\nCubre exención total de matrícula académica y estipendio mensual pagado por la universidad anfitriona en Brasil. Se puede postular hasta a 5 programas en diferentes universidades de Brasil en un solo formulario.",
+            "eligibility": "Ciudadanos de estados miembros de la OEA (Bolivia incluido) con título de licenciatura de universidad reconocida. No tener nacionalidad brasileña.",
+            "benefits": "Exención total de matrícula universitaria y estipendio mensual variable pagado por la universidad anfitriona.",
+            "slots": 30,
+            "status": "approved",
+            "activities": [
+                "Maestría presencial en universidades de Brasil 🇧🇷",
+                "Investigación científica y proyectos académicos 🔬",
+                "Postulación simultánea a hasta 5 programas diferentes 📚"
+            ],
+            "requirements": [
+                "Título universitario de Licenciatura",
+                "No tener nacionalidad brasileña",
+                "Declaración de buena salud física y mental",
+                "No es obligatorio saber portugués al momento de postular"
+            ],
+            "benefits_json": [
+                "Exención 100% de matrícula y tasas académicas 💸",
+                "Estipendio mensual de subsistencia durante la maestría 💰",
+                "Acceso a laboratorios e instalaciones de 50+ universidades 🇧🇷"
+            ],
+            "dates_info": "Convocatoria anual: Abre habitualmente a mitad de año (cierre en Julio)",
+            "support_ai": [
+                "Selección óptima de los 5 programas universitarios en Brasil",
+                "Estructuración de hoja de vida académica",
+                "Carta de declaración de objetivos"
+            ],
+            "facebook_url": "https://www.facebook.com/gcub.org.br",
+            "instagram_url": "https://www.instagram.com/gcub.oficial",
+            "youtube_url": "https://www.youtube.com/@gcub",
+            "video_url": "https://www.youtube.com/watch?v=oea-gcub",
+            "image_url": "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=800&q=80",
+            "is_demo": False,
+            "ideal_profile": [
+                {"emoji": "🇧🇷", "title": "50+ Universidades", "tags": ["Brasil", "Multi-opción hasta 5 carreras"]},
+                {"emoji": "🎓", "title": "Maestría y Posgrado", "tags": ["Exención de matrícula", "Estipendio mensual"]},
+                {"emoji": "🗣", "title": "Sin portugués previo", "tags": ["Aprendizaje en campus", "Elegible Bolivia"]}
+            ],
+            "testimonials": [
+                {"name": "Diego Torrico", "country": "🇧🇴 Bolivia", "year": "2023", "university": "USP (Universidad de San Pablo)", "program": "Maestría en Ciencia de Datos", "quote": "Postular a 5 opciones en un solo formulario aumenta muchísimo las oportunidades de quedar en Brasil."}
+            ],
+            "faq": [
+                {"question": "¿A cuántos programas puedo postular en la Beca OEA-GCUB?", "answer": "Puedes seleccionar hasta 5 programas diferentes en universidades distintas de Brasil en una misma postulación."},
+                {"question": "¿Necesito certificado de idioma portugués para aplicar?", "answer": "No es obligatorio saber portugués al momento de la postulación."}]
+        },
+        {
+            "title": "Becas SISS / Global Professionals (Suecia)",
+            "slug": "swedish-institute-siss-beca",
+            "type": "scholarship",
+            "organization": "Instituto Sueco (Swedish Institute)",
+            "organization_name": "Gobierno de Suecia",
+            "country": "Suecia",
+            "city": "Estocolmo, Lund, Uppsala, Gotemburgo",
+            "institution": "Universidades de Suecia",
+            "level": "Maestría (1 a 2 años)",
+            "funding_type": "100% completa",
+            "area": "Sostenibilidad, Innovación, Gobierno, Agenda 2030",
+            "language": "Inglés C1",
+            "duration": "1 a 2 años académicos",
+            "deadline": "2027-02-28",
+            "official_url": "https://si.se/en/apply/scholarships/swedish-institute-scholarships-for-global-professionals/",
+            "short_description": "Programa del Instituto Sueco enfocado en líderes globales. Cubre matrícula completa, estipendio de 11.000 SEK/mes, seguro y pasajes.",
+            "description": "Programa enfocado en desarrollar líderes globales que contribuyan a la Agenda 2030 para el Desarrollo Sostenible. Financia maestrías de excelencia en Suecia con uno de los mejores estipendios de vida en Europa del Norte.\n\nCubre el 100% de la matrícula académica, un estipendio mensual de aprox. 11.000 SEK, seguro médico de cobertura completa y subsidio para pasajes internacionales.",
+            "eligibility": "Profesionales bolivianos con mínimo 3.000 horas de experiencia laboral demostrable, liderazgo probado y haber postulado previamente a la universidad sueca en Enero.",
+            "benefits": "Matrícula pagada directamente a la universidad, estipendio mensual de 11.000 SEK, pasajes aéreos y seguro de salud.",
+            "slots": 10,
+            "status": "approved",
+            "activities": [
+                "Maestría en universidades suecas de ranking mundial 🇸🇪",
+                "Membresía en la red Network for Future Global Leaders (NFGL) 🌟",
+                "Talleres de innovación y liderazgo sostenible en Escandinavia 🌲"
+            ],
+            "requirements": [
+                "Mínimo 3.000 horas de experiencia laboral o voluntariado certificado",
+                "Demostrar experiencia de liderazgo",
+                "Haber postulado a una universidad sueca a través del portal nacional University Admissions en Enero"
+            ],
+            "benefits_json": [
+                "100% Matrícula universitaria cubierta directamente 💸",
+                "Estipendio mensual de 11.000 SEK (manutención de alto nivel en Suecia) 💰",
+                "Asignación de viaje y pasajes aéreos ✈️",
+                "Seguro de salud y accidentes completo 🏥"
+            ],
+            "dates_info": "Convocatoria anual: Postulación universitaria en Enero, postulación a beca SISS en Febrero",
+            "support_ai": [
+                "Cálculo y desglose del certificado de 3.000 horas laborales",
+                "Redacción de Carta de Recomendación de Liderazgo para el Instituto Sueco",
+                "Guía de postulación en University Admissions"
+            ],
+            "facebook_url": "https://www.facebook.com/swedishinstitute",
+            "instagram_url": "https://www.instagram.com/swedishinstitute",
+            "youtube_url": "https://www.youtube.com/@swedishinstitute",
+            "video_url": "https://www.youtube.com/watch?v=sweden-siss",
+            "image_url": "https://images.unsplash.com/photo-1509356843151-3e7d96241e11?w=800&q=80",
+            "is_demo": False,
+            "ideal_profile": [
+                {"emoji": "🇸🇪", "title": "Líderes Sostenibles", "tags": ["Agenda 2030", "Innovación escandinava"]},
+                {"emoji": "💼", "title": "3.000 Horas Experiencia", "tags": ["Trabajo comprobable", "Demostrar liderazgo"]},
+                {"emoji": "💶", "title": "Estipendio 11.000 SEK", "tags": ["100% Matrícula", "Pasajes incluidos"]}
+            ],
+            "testimonials": [
+                {"name": "Andrés Roca", "country": "🇧🇴 Bolivia", "year": "2023", "university": "Lund University", "program": "MSc Environmental Management", "quote": "El nivel de vida en Suecia y la red de becarios del Instituto Sueco son insuperables."}
+            ],
+            "faq": [
+                {"question": "¿Cuál es el primer paso para la Beca del Instituto Sueco?", "answer": "Primero debes aplicar a un programa de maestría en el portal nacional University Admissions en Enero, y luego solicitar la beca SISS en Febrero."},
+                {"question": "¿Cuántas horas de experiencia exigen?", "answer": "Se exigen al menos 3.000 horas demostrables de trabajo remunerado o voluntariado."}]
+        },
+        {
+            "title": "Becas ARES (Bélgica)",
+            "slug": "ares-belgica-beca",
+            "type": "scholarship",
+            "organization": "Academia de Investigación y de Enseñanza Superior (ARES)",
+            "organization_name": "Gobierno de Bélgica",
+            "country": "Bélgica",
+            "city": "Bruselas, Lieja, Lovaina la Nueva",
+            "institution": "Universidades Francófonas de Bélgica",
+            "level": "Maestría de Especialización",
+            "funding_type": "100% completa",
+            "area": "Salud Pública, Gestión de Riesgos, Recursos Hídricos, Pedagogía",
+            "language": "Francés / Inglés",
+            "duration": "1 año (12 meses)",
+            "deadline": "2027-01-31",
+            "official_url": "https://www.ares-ac.be/",
+            "short_description": "Becas de maestría de especialización totalmente financiadas en Bélgica para profesionales enfocados en desarrollo y gestión de proyectos.",
+            "description": "Becas de maestría de especialización dirigidas a profesionales de países socios que buscan adquirir habilidades para resolver problemáticas de desarrollo en sus países de origen.\n\nOfrece estipendio mensual de subsistencia, gastos de instalación iniciales, matrícula 100% exenta, seguro médico completo y billetes de avión ida y vuelta a Bélgica.",
+            "eligibility": "Profesionales bolivianos menores de 40 años con título universitario de licenciatura, 2 años de experiencia profesional y dominio del idioma requerido (Francés o Inglés).",
+            "benefits": "Estipendio mensual de subsistencia, gastos de instalación, matrícula, seguro médico y vuelos ida y vuelta.",
+            "slots": 12,
+            "status": "approved",
+            "activities": [
+                "Maestría de especialización práctica de 1 año en Bélgica 🇧🇪",
+                "Investigación aplicada a desarrollo sostenible y salud pública 🔬",
+                "Prácticas en laboratorios e institutos belgas 💡"
+            ],
+            "requirements": [
+                "Título universitario de licenciatura",
+                "Al menos 2 años de experiencia profesional post-grado",
+                "Tener menos de 40 años al iniciar el programa",
+                "Dominio de idioma (Francés B2 o Inglés B2 según el programa)"
+            ],
+            "benefits_json": [
+                "100% Matrícula y aranceles universitarios cubiertos 💸",
+                "Estipendio mensual completo de subsistencia 💰",
+                "Asignación inicial para gastos de instalación",
+                "Pasajes aéreos internacionales ida y vuelta ✈️",
+                "Seguro médico integral 🏥"
+            ],
+            "dates_info": "Convocatoria anual: Abre en Agosto y cierra entre Enero y Febrero",
+            "support_ai": [
+                "Orientación en áreas elegibles de ARES (Salud pública, Agua, Riesgos)",
+                "Redacción de justificación de proyecto para Bolivia",
+                "Traducción de CV a formato europeo"
+            ],
+            "facebook_url": "https://www.facebook.com/ares.ac.be",
+            "instagram_url": "https://www.instagram.com/ares_be",
+            "youtube_url": "https://www.youtube.com/@ARES_be",
+            "video_url": "https://www.youtube.com/watch?v=ares-belgica",
+            "image_url": "https://images.unsplash.com/photo-1513581166391-887a96ddeafd?w=800&q=80",
+            "is_demo": False,
+            "ideal_profile": [
+                {"emoji": "🇧🇪", "title": "Especialización Bélgica", "tags": ["1 año duración", "Francófono e Inglés"]},
+                {"emoji": "💼", "title": "2 Años Experiencia", "tags": ["Profesionales <40 años", "Impacto social"]},
+                {"emoji": "💶", "title": "Financiación Completa", "tags": ["Estipendio", "Vuelos", "Instalación"]}
+            ],
+            "testimonials": [
+                {"name": "Mariana Calle", "country": "🇧🇴 Bolivia", "year": "2023", "university": "Université de Liège", "program": "Maestría en Gestión de Riesgos y Desastres", "quote": "ARES se enfoca en resolver problemas reales de desarrollo de nuestros países."}
+            ],
+            "faq": [
+                {"question": "¿Cuál es el límite de edad para la Beca ARES de Bélgica?", "answer": "Debes tener menos de 40 años al momento de iniciar la maestría."},
+                {"question": "¿Requiere experiencia laboral previa?", "answer": "Sí, se exigen al menos 2 años de experiencia profesional tras la titulación."}]
+        },
+        {
+            "title": "Becas de Investigación de Corta Duración DAAD",
+            "slug": "daad-investigacion-beca",
+            "type": "scholarship",
+            "organization": "Servicio Alemán de Intercambio Académico (DAAD)",
+            "organization_name": "DAAD Alemania",
+            "country": "Alemania",
+            "city": "Göttingen, Heidelberg, Berlín, Múnich",
+            "institution": "Universidades e Institutos de Investigación de Alemania",
+            "level": "Investigación / Doctorado",
+            "funding_type": "100% completa",
+            "area": "Todas las áreas de investigación",
+            "language": "Inglés / Alemán",
+            "duration": "1 a 6 meses",
+            "deadline": "2026-08-31",
+            "official_url": "https://www.daad.de/en/study-and-research-in-germany/scholarships/",
+            "short_description": "Estancias de investigación de corta duración (1 a 6 meses) en Alemania para doctorandos y jóvenes científicos bolivianos.",
+            "description": "Becas diseñadas para permitir a estudiantes de doctorado y jóvenes investigadores bolivianos realizar una estancia de investigación en una universidad o centro de investigación alemán. Ideal para recopilación de datos, uso de laboratorios específicos o trabajo de tesis.",
+            "eligibility": "Estudiantes de doctorado, jóvenes académicos y científicos bolivianos con proyecto de investigación detallado y carta de invitación del profesor anfitrión en Alemania.",
+            "benefits": "Estipendio mensual de 934€ a 1.200€, seguro médico completo y asignación para gastos de viaje internacional.",
+            "slots": 15,
+            "status": "approved",
+            "activities": [
+                "Trabajo científico de laboratorio o archivo en Alemania 🔬",
+                "Uso de tecnología de punta e infraestructuras alemanas 📊",
+                "Redacción de artículos científicos e intercambio académico 🤝"
+            ],
+            "requirements": [
+                "Proyecto de investigación estructurado acordado con un supervisor en Alemania",
+                "Carta de invitación oficial del profesor anfitrión alemán",
+                "Dominio de inglés o alemán académico"
+            ],
+            "benefits_json": [
+                "Estipendio mensual de 934€ a 1.200€ según grado académico 💶",
+                "Seguro de salud, accidentes y responsabilidad civil 🏥",
+                "Subsidio para pasajes internacionales ida y vuelta ✈️"
+            ],
+            "dates_info": "Dos cierres anuales habituales: En Abril y en Agosto",
+            "support_ai": [
+                "Estructuración de propuesta de investigación DAAD",
+                "Redacción de modelo de contacto para profesores anfitriones alemanes",
+                "Formulación de cronograma de laboratorio"
+            ],
+            "facebook_url": "https://www.facebook.com/DAAD.Worldwide",
+            "instagram_url": "https://www.instagram.com/daad_worldwide",
+            "youtube_url": "https://www.youtube.com/@DAADWorldwide",
+            "video_url": "https://www.youtube.com/watch?v=daad-research",
+            "image_url": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&q=80",
+            "is_demo": False,
+            "ideal_profile": [
+                {"emoji": "🇩🇪", "title": "Estancia en Alemania", "tags": ["1 a 6 meses", "Laboratorios de punta"]},
+                {"emoji": "🔬", "title": "Doctorandos e Investigadores", "tags": ["Tesis doctoral", "Recopilación datos"]},
+                {"emoji": "💶", "title": "Beca Mensual DAAD", "tags": ["934€ a 1.200€/mes", "Seguro y Vuelos"]}
+            ],
+            "testimonials": [
+                {"name": "Dr. Fernando Zeballos", "country": "🇧🇴 Bolivia", "year": "2023", "university": "TU Munich", "program": "Estancia Doctoral en Física", "quote": "El DAAD te da acceso a laboratorios alemanes con financiamiento impecable."}
+            ],
+            "faq": [
+                {"question": "¿Cuál es la clave para obtener la Beca de Investigación DAAD?", "answer": "Tener un contacto previo sólido y contar con la carta de invitación firmada por un profesor anfitrión en una universidad o centro alemán."},
+                {"question": "¿Qué duración tienen las estancias?", "answer": "Tienen una duración flexible de 1 a 6 meses."}]
+        },
+        {
+            "title": "Humboldt Research Fellowship",
+            "slug": "humboldt-research-beca",
+            "type": "scholarship",
+            "organization": "Fundación Alexander von Humboldt",
+            "organization_name": "Fundación Humboldt",
+            "country": "Alemania",
+            "city": "Berlín, Bonn, Heidelberg, Múnich",
+            "institution": "Universidades e Institutos de Investigación de Alemania",
+            "level": "Postdoctorado / Investigación PhD",
+            "funding_type": "100% completa",
+            "area": "Todas las disciplinas académicas y científicas",
+            "language": "Inglés / Alemán",
+            "duration": "6 a 24 meses",
+            "deadline": None,
+            "official_url": "https://www.humboldt-foundation.de/en/apply/sponsorship-programmes/humboldt-research-fellowship",
+            "short_description": "Becas postdoctorales de alto prestigio internacional para desarrollar proyectos de investigación autónomos en Alemania de 6 a 24 meses.",
+            "description": "Programa destinado a investigadores con un perfil académico sobresaliente que deseen llevar a cabo un proyecto de investigación de libre elección en Alemania en colaboración con un anfitrión académico.\n\nSin cuotas por país: la selección se basa exclusivamente en la excelencia académica individual. Incluye estipendio mensual de 2.600€ a 3.100€, apoyo económico para cónyuges e hijos, gastos de viaje y cursos de alemán.",
+            "eligibility": "Investigadores de todo el mundo con doctorado (PhD) obtenido en los últimos 4 a 12 años e historial sobresaliente de publicaciones internacionales peer-reviewed.",
+            "benefits": "Asignación mensual de 2.600€ a 3.100€, apoyo económico para familiares, gastos de viaje y curso de alemán.",
+            "slots": 10,
+            "status": "approved",
+            "activities": [
+                "Proyecto de investigación autónomo en universidad o centro en Alemania 🔬",
+                "Publicación en revistas científicas internacionales de alto impacto 📚",
+                "Membresía vitalicia en la red de Humboldt Fellows 🌐"
+            ],
+            "requirements": [
+                "Título de Doctorado (PhD) obtenido en los últimos 4 a 12 años",
+                "Historial sobresaliente de publicaciones en revistas internacionales",
+                "Proyecto de investigación original acordado con anfitrión en Alemania"
+            ],
+            "benefits_json": [
+                "Estipendio mensual de 2.600€ (Postdoc) a 3.100€ (Experienced Researcher) 💶",
+                "Subsidio adicional para cónyuge e hijos 👨‍👩‍👧",
+                "Gastos de viaje internacional ida y vuelta ✈️",
+                "Curso intensivo de idioma alemán pagado 🗣"
+            ],
+            "dates_info": "Convocatoria abierta todo el año (evaluaciones en Marzo, Julio y Noviembre)",
+            "support_ai": [
+                "Revisión de propuesta de investigación post-doctoral",
+                "Estrategia de presentación ante el anfitrión Humboldt",
+                "Asesoramiento para historial de publicaciones"
+            ],
+            "facebook_url": "https://www.facebook.com/HumboldtFoundation",
+            "instagram_url": "https://www.instagram.com/humboldtfoundation",
+            "youtube_url": "https://www.youtube.com/@HumboldtFoundation",
+            "video_url": "https://www.youtube.com/watch?v=humboldt-fellowship",
+            "image_url": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80",
+            "is_demo": False,
+            "ideal_profile": [
+                {"emoji": "🇩🇪", "title": "Investigadores PhD", "tags": ["Postdoctorado", "Excelencia académica"]},
+                {"emoji": "💶", "title": "2.600€ a 3.100€/mes", "tags": ["Apoyo a familiares", "6 a 24 meses"]},
+                {"emoji": "🌐", "title": "Red Humboldt", "tags": ["Prestigio mundial", "Sin cuotas por país"]}
+            ],
+            "testimonials": [
+                {"name": "Dra. Patricia Soruco", "country": "🇧🇴 Bolivia", "year": "2022", "university": "Humboldt University Berlin", "program": "Investigación Postdoctoral en Química", "quote": "La Fundación Humboldt ofrece libertad de investigación y un apoyo familiar formidable."}
+            ],
+            "faq": [
+                {"question": "¿Cuándo se puede postular a la Humboldt Fellowship?", "answer": "La convocatoria está abierta los 365 días del año. Los comités de evaluación se reúnen 3 veces al año (Marzo, Julio y Noviembre)."},
+                {"question": "¿Hay cuotas fijas por país?", "answer": "No. La selección se basa 100% en el mérito y la calidad del perfil del investigador."}]
+        },
+        {
+            "title": "Fulbright Visiting Scholar Program",
+            "slug": "fulbright-visiting-scholar-beca",
+            "type": "scholarship",
+            "organization": "Gobierno de los Estados Unidos (Embajada de EE.UU.)",
+            "organization_name": "Fulbright EE.UU.",
+            "country": "Estados Unidos",
+            "city": "Universidades de Estados Unidos",
+            "institution": "Universidades e Institutos de EE.UU.",
+            "level": "Investigación / Docencia Académica",
+            "funding_type": "Parcial o Total",
+            "area": "Todas las disciplinas académicas",
+            "language": "Inglés (TOEFL/IELTS)",
+            "duration": "3 a 9 meses",
+            "deadline": "2026-06-30",
+            "official_url": "https://bo.usembassy.gov/es/intercambio-educativo/",
+            "short_description": "Permite a académicos y profesionales bolivianos realizar investigaciones avanzadas en universidades de EE.UU. por 3 a 9 meses.",
+            "description": "Permite a académicos y profesionales bolivianos con amplia experiencia realizar investigaciones avanzadas en universidades de los Estados Unidos.\n\nEs una oportunidad para crear redes de contacto académicas de alto nivel entre Bolivia y EE. UU. Cubre estipendio de manutención, pasajes aéreos y seguro médico.",
+            "eligibility": "Docentes universitarios, investigadores y profesionales bolivianos con título de maestría o doctorado y proyecto de investigación definido.",
+            "benefits": "Estipendio mensual de manutención, pasajes aéreos internacionales ida y vuelta, seguro médico integral.",
+            "slots": 5,
+            "status": "approved",
+            "activities": [
+                "Investigación avanzada en universidades estadounidenses 🇺🇸",
+                "Networking académico con profesores e investigadores de EE.UU. 🤝",
+                "Conferencias y seminarios especializados 🎓"
+            ],
+            "requirements": [
+                "Nacionalidad boliviana",
+                "Título de Maestría o Doctorado",
+                "Proyecto de investigación definido con propuesta sólida",
+                "Excelente nivel de inglés fluido",
+                "Compromiso formal de retorno a Bolivia al finalizar"
+            ],
+            "benefits_json": [
+                "Estipendio de manutención en EE.UU. 💰",
+                "Pasajes aéreos ida y vuelta ✈️",
+                "Seguro médico y de accidentes 🏥",
+                "Red global de contactos Fulbright 🇺🇸"
+            ],
+            "dates_info": "Convocatoria anual: Cierre entre Mayo y Junio de cada año",
+            "support_ai": [
+                "Estructuración del proyecto de investigación para EE.UU.",
+                "Redacción de carta de presentación institucional",
+                "Simulación de entrevista con Embajada de EE.UU."
+            ],
+            "facebook_url": "https://www.facebook.com/bolivia.usembassy",
+            "instagram_url": "https://www.instagram.com/usembassybolivia",
+            "youtube_url": "https://www.youtube.com/@usembassybolivia",
+            "video_url": "https://www.youtube.com/watch?v=fulbright-visiting",
+            "image_url": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&q=80",
+            "is_demo": False,
+            "ideal_profile": [
+                {"emoji": "🇺🇸", "title": "Investigadores PhD/MSc", "tags": ["Docentes Universitarios", "Investigación avanzada"]},
+                {"emoji": "🔬", "title": "Proyectos de Impacto", "tags": ["3 a 9 meses", "Universidades de EE.UU."]},
+                {"emoji": "🤝", "title": "Retorno a Bolivia", "tags": ["Networking científico", "Convenios Bilaterales"]}
+            ],
+            "testimonials": [
+                {"name": "Dr. Sergio Miranda", "country": "🇧🇴 Bolivia", "year": "2023", "university": "Harvard University", "program": "Visiting Scholar", "quote": "Establecer nexos con laboratorios en EE.UU. abrió oportunidades gigantes para nuestra facultad en Bolivia."}
+            ],
+            "faq": [
+                {"question": "¿Quiénes pueden postular?", "answer": "Docentes universitarios e investigadores bolivianos con grado de Maestría o Doctorado."},
+                {"question": "¿Cuál es la duración del programa?", "answer": "Tiene una duración de 3 a 9 meses académicos."}]
+        },
+        {
+            "title": "Becas de Investigación del Gobierno Suizo",
+            "slug": "suiza-research-fellowship-beca",
+            "type": "scholarship",
+            "organization": "Gobierno de Suiza (SBFI)",
+            "organization_name": "Gobierno de Suiza",
+            "country": "Suiza",
+            "city": "Zúrich, Ginebra, Lausana, Basilea",
+            "institution": "Universidades e Institutos Politécnicos de Suiza",
+            "level": "Investigación / Posgrado",
+            "funding_type": "100% completa",
+            "area": "Biotecnología, Química, Física, Ingeniería, Salud",
+            "language": "Inglés / Francés / Alemán",
+            "duration": "Hasta 12 meses",
+            "deadline": "2026-11-15",
+            "official_url": "https://www.sbfi.admin.ch/scholarships_eng",
+            "short_description": "Becas del Gobierno Suizo para realizar estancias de investigación de posgrado en instituciones de élite mundial en Suiza.",
+            "description": "Destinadas a investigadores que deseen realizar una investigación de posgrado en Suiza sin necesariamente obtener un título suizo.\n\nSuiza es líder mundial en biotecnología, química y física; es una oportunidad de oro para investigadores en esas áreas. Cubre un estipendio mensual de 1.920 CHF, seguro médico y gastos de viaje.",
+            "eligibility": "Investigadores bolivianos con título de maestría o doctorado, menores de 35 años (para posgrado), con proyecto de alta calidad y carta de aceptación suiza.",
+            "benefits": "Estipendio mensual de 1.920 CHF, seguro médico integral, alojamiento subsidiado y gastos de viaje aéreo.",
+            "slots": 8,
+            "status": "approved",
+            "activities": [
+                "Investigación avanzada en institutos de Suiza (EPFL, ETH Zürich, UNIGE) 🇨🇭",
+                "Acceso a infraestructura científica de vanguardia mundial 🔬",
+                "Colaboración con grupos de investigación internacionales 🤝"
+            ],
+            "requirements": [
+                "Nacionalidad boliviana",
+                "Título de Maestría o Doctorado",
+                "Tener menos de 35 años al momento de postular (para nivel posgrado)",
+                "Proyecto de investigación de alta calidad científica",
+                "Carta de aceptación firmada por un profesor en una universidad suiza"
+            ],
+            "benefits_json": [
+                "Estipendio mensual de 1.920 CHF (manutención en Suiza) 🇨🇭",
+                "Seguro de salud y accidentes completo 🏥",
+                "Pasajes aéreos internacionales ida y vuelta ✈️"
+            ],
+            "dates_info": "Convocatoria anual: Cierre regular en Noviembre",
+            "support_ai": [
+                "Redacción de propuesta de investigación según formato SBFI",
+                "Plantillas de contacto para docentes en ETH / EPFL / UNIGE",
+                "Revisión de expediente académico"
+            ],
+            "facebook_url": "https://www.facebook.com/SwissGov",
+            "instagram_url": "https://www.instagram.com/swissembassy",
+            "youtube_url": "https://www.youtube.com/@SwissGov",
+            "video_url": "https://www.youtube.com/watch?v=swiss-research",
+            "image_url": "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?w=800&q=80",
+            "is_demo": False,
+            "ideal_profile": [
+                {"emoji": "🇨🇭", "title": "Investigación en Suiza", "tags": ["ETH / EPFL", "Líderes en ciencia"]},
+                {"emoji": "🔬", "title": "Biotecnología & Física", "tags": ["12 meses", "1.920 CHF/mes"]},
+                {"emoji": "📊", "title": "<35 Años", "tags": ["Maestría o PhD", "Carta de aceptación suiza"]}
+            ],
+            "testimonials": [
+                {"name": "Dr. Raúl Camacho", "country": "🇧🇴 Bolivia", "year": "2023", "university": "ETH Zürich", "program": "Research Fellow", "quote": "La infraestructura suiza para ciencia e ingeniería no tiene comparación en el mundo."}
+            ],
+            "faq": [
+                {"question": "¿Es obligatorio obtener un título en Suiza?", "answer": "No. La beca está diseñada para estancias de investigación de posgrado sin necesidad de titularse en Suiza."},
+                {"question": "¿Cuál es el estipendio mensual?", "answer": "El Gobierno Suizo otorga 1.920 CHF mensuales más seguro y gastos de viaje."}]
+        },
+        {
+            "title": "Becas TWAS para Países en Desarrollo",
+            "slug": "twas-desarrollo-beca",
+            "type": "scholarship",
+            "organization": "The World Academy of Sciences (TWAS / CNPq)",
+            "organization_name": "Academia Mundial de Ciencias",
+            "country": "Brasil (Sur Global)",
+            "city": "Universidades de Brasil, México, India",
+            "institution": "Institutos del Sur Global (ej. Brasil / CNPq)",
+            "level": "Doctorado / Postdoctorado",
+            "funding_type": "100% completa",
+            "area": "Ciencias Naturales, Biología, Química, Física, Agronomía",
+            "language": "Inglés / Portugués / Español",
+            "duration": "3 a 12 meses",
+            "deadline": "2026-09-15",
+            "official_url": "https://twas.org/opportunities/fellowships",
+            "short_description": "Programa de la Academia Mundial de Ciencias para estancias de investigación en países del Sur Global (Brasil, México, India).",
+            "description": "Programa de la Academia Mundial de Ciencias (TWAS) para que investigadores de países del sur global (como Bolivia) realicen estancias de investigación en países como Brasil, China, India o México.\n\nEs excelente para fortalecer la cooperación científica regional, especialmente los convenios TWAS-CNPq en Brasil. Cubre manutención completa y pasajes aéreos.",
+            "eligibility": "Estudiantes de doctorado o doctores jóvenes en ciencias naturales con nacionalidad boliviana y trabajando en investigación en su país de origen.",
+            "benefits": "Manutención mensual pagada por el país anfitrión, cobertura de pasajes aéreos y seguro de investigación.",
+            "slots": 15,
+            "status": "approved",
+            "activities": [
+                "Estancia de investigación doctoral o posdoctoral en el Sur Global 🇧🇷",
+                "Uso de laboratorios y experimentos compartidos 🔬",
+                "Publicación de papers en cooperación regional 📚"
+            ],
+            "requirements": [
+                "Nacionalidad de un país en desarrollo (Bolivia elegible)",
+                "Estar inscrito en un doctorado o poseer título de PhD joven",
+                "Estar trabajando activamente en investigación en Bolivia",
+                "Dominio del idioma del país de destino"
+            ],
+            "benefits_json": [
+                "Manutención mensual completa 💰",
+                "Pasajes aéreos cubiertos por TWAS o convenio ✈️",
+                "Acceso a redes científicas del Sur Global 🌍"
+            ],
+            "dates_info": "Convocatorias anuales variables entre Junio y Septiembre",
+            "support_ai": [
+                "Selección de convenios TWAS prioritarios (ej. TWAS-CNPq Brasil)",
+                "Formulación de plan de trabajo científico",
+                "Revisión de perfil académico"
+            ],
+            "facebook_url": "https://www.facebook.com/TWAS.Science",
+            "instagram_url": "https://www.instagram.com/twasnews",
+            "youtube_url": "https://www.youtube.com/@twas_science",
+            "video_url": "https://www.youtube.com/watch?v=twas-video",
+            "image_url": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&q=80",
+            "is_demo": False,
+            "ideal_profile": [
+                {"emoji": "🇧🇷", "title": "Investigación Sur Global", "tags": ["Convenio Brasil", "CNPq / TWAS"]},
+                {"emoji": "🔬", "title": "Ciencias Naturales", "tags": ["Doctorandos", "3 a 12 meses"]},
+                {"emoji": "🌍", "title": "Cooperación Regional", "tags": ["Elegible Bolivia", "100% Financiado"]}
+            ],
+            "testimonials": [
+                {"name": "Dra. Karen Justiniano", "country": "🇧🇴 Bolivia", "year": "2023", "university": "UNICAMP Brasil", "program": "TWAS Fellow", "quote": "Los convenios TWAS te conectan con los centros de investigación más avanzados de Sudamérica."}
+            ],
+            "faq": [
+                {"question": "¿Qué países son los más comunes para bolivianos en TWAS?", "answer": "Brasil es el destino más frecuente mediante el convenio histórico TWAS-CNPq."},
+                {"question": "¿Cubre pasajes aéreos?", "answer": "Sí, en la mayoría de los convenios TWAS se cubre la manutención y el pasaje internacional."}]
+        },
+        {
+            "title": "Emerging Leaders in the Americas Program (ELAP)",
+            "slug": "elap-canada-beca",
+            "type": "scholarship",
+            "organization": "Gobierno de Canadá (EduCanada)",
+            "organization_name": "Gobierno de Canadá",
+            "country": "Canadá",
+            "city": "Toronto, Vancouver, Montreal, Calgary",
+            "institution": "Universidades de Canadá",
+            "level": "Pregrado y Posgrado",
+            "funding_type": "100% completa",
+            "area": "Multidisciplinaria",
+            "language": "Inglés / Francés",
+            "duration": "4 meses (semestre) o 5-6 meses (investigación)",
+            "deadline": "2027-03-20",
+            "official_url": "https://www.educanada.ca/scholarships-bourses/can/institutions/elap-pfla.aspx?lang=eng",
+            "short_description": "Becas del gobierno canadiense para realizar intercambios de 4 a 6 meses en universidades de Canadá para líderes emergentes.",
+            "description": "Becas del gobierno canadiense para que estudiantes de Latinoamérica realicen intercambios de corta duración en universidades canadienses para fortalecer sus habilidades de liderazgo.\n\nOfrece asignaciones de entre 8,200 y 11,100 CAD dependiendo del nivel para cubrir vuelos, visado, seguro médico y manutención mensual.",
+            "eligibility": "Estudiantes de pregrado o posgrado inscritos en universidades bolivianas que tengan un convenio previo con una universidad canadiense.",
+            "benefits": "Asignación total de 8.200 CAD (Pregrado/Maestría) a 11.100 CAD (Doctorado/Investigación) para pasajes, visa, seguro y estancia.",
+            "slots": 10,
+            "status": "approved",
+            "activities": [
+                "Semestre académico de intercambio en Canadá 🇨🇦",
+                "Investigación o estudio de curso completo en campus canadiense 📚",
+                "Formación en liderazgo y networking internacional 🤝"
+            ],
+            "requirements": [
+                "Estar inscrito como estudiante activo en universidad boliviana",
+                "Existencia de convenio previo de intercambio con universidad canadiense",
+                "Nominación directa realizada por la oficina internacional canadiense"
+            ],
+            "benefits_json": [
+                "Beca completa de 8.200 a 11.100 CAD 💰",
+                "Pasajes aéreos ida y vuelta ✈️",
+                "Visa de estudiante y seguro de salud 🏥",
+                "Estancia de 4 a 6 meses en Canadá 🇨🇦"
+            ],
+            "dates_info": "Convocatoria anual: Cierre en Marzo (postulación gestionada por universidad canadiense)",
+            "support_ai": [
+                "Verificación de convenios entre universidades bolivianas y canadienses",
+                "Redacción de Carta de Intención para oficina de relaciones internacionales",
+                "Certificación de promedio de calificaciones"
+            ],
+            "facebook_url": "https://www.facebook.com/EduCanada.Official",
+            "instagram_url": "https://www.instagram.com/educanada.official",
+            "youtube_url": "https://www.youtube.com/@EduCanadaOfficial",
+            "video_url": "https://www.youtube.com/watch?v=elap-canada",
+            "image_url": "https://images.unsplash.com/photo-1517935703635-27c735286572?w=800&q=80",
+            "is_demo": False,
+            "ideal_profile": [
+                {"emoji": "🇨🇦", "title": "Intercambio en Canadá", "tags": ["4 a 6 meses", "8.200 - 11.100 CAD"]},
+                {"emoji": "🎓", "title": "Pregrado y Posgrado", "tags": ["Estudiantes en Bolivia", "Convenios bilatelares"]},
+                {"emoji": "🍁", "title": "Líderes Emergentes", "tags": ["EduCanada", "100% Financiado"]}
+            ],
+            "testimonials": [
+                {"name": "Camila Zenteno", "country": "🇧🇴 Bolivia", "year": "2023", "university": "University of Alberta", "program": "ELAP Scholar", "quote": "ELAP te da la oportunidad de vivir un semestre de intercambio en Canadá con financiamiento completo."}
+            ],
+            "faq": [
+                {"question": "¿Puedo postularme yo mismo directamente?", "answer": "No. La postulación la realiza la oficina de relaciones internacionales de la universidad canadiense asociada."},
+                {"question": "¿Cuál es el monto de la beca?", "answer": "Otorga 8.200 CAD para 4 meses de grado/posgrado y 11.100 CAD para 5-6 meses de investigación."}]
+        },
+        {
+            "title": "Programa SUSI (Study of the U.S. Institutes)",
+            "slug": "susi-eeuu-beca",
+            "type": "scholarship",
+            "organization": "Departamento de Estado de los EE. UU. / Embajada de EE.UU.",
+            "organization_name": "Departamento de Estado EE.UU.",
+            "country": "Estados Unidos",
+            "city": "Universidades e Institutos de EE.UU.",
+            "institution": "Institutos Académicos de EE.UU.",
+            "level": "Curso Corto / Liderazgo",
+            "funding_type": "100% completa",
+            "area": "Liderazgo, Políticas Públicas, Cultura y Sociedad",
+            "language": "Inglés / Español (según categoría)",
+            "duration": "5 a 6 semanas",
+            "deadline": "2026-12-20",
+            "official_url": "https://bo.usembassy.gov/es/education-exchanges-es/",
+            "short_description": "Programas académicos intensivos de 5 a 6 semanas en EE.UU. para líderes estudiantiles universitarios y educadores.",
+            "description": "Programas académicos intensivos que buscan proporcionar a líderes estudiantiles y educadores una comprensión profunda de la sociedad, cultura y valores de EE. UU. a través de seminarios y visitas culturales.\n\nEs una experiencia de inmersión cultural y académica de gran impacto. Cubre vuelos, alojamiento, comidas, estipendio para libros y seguro médico.",
+            "eligibility": "Jóvenes líderes universitarios bolivianos (18-25 años) y educadores o administradores académicos con buen desempeño.",
+            "benefits": "Pasajes aéreos ida y vuelta, alojamiento completo, alimentación, estipendio de libros, visitas culturales y seguro médico.",
+            "slots": 12,
+            "status": "approved",
+            "activities": [
+                "Seminarios académicos e inmersión cultural en EE.UU. 🇺🇸",
+                "Visitas a instituciones gubernamentales y comunitarias 🏛️",
+                "Red de líderes de todo el continente americano 🤝"
+            ],
+            "requirements": [
+                "Nacionalidad boliviana",
+                "Tener entre 18 y 25 años (para la categoría de líderes estudiantiles)",
+                "Liderazgo demostrado en su universidad o comunidad",
+                "Buen rendimiento académico",
+                "Dominio de inglés (salvo programas específicos en español para líderes afro/indígenas)"
+            ],
+            "benefits_json": [
+                "Pasajes aéreos internacionales ida y vuelta ✈️",
+                "Alojamiento y alimentación 100% cubiertos 🏠",
+                "Estipendio para libros y materiales 📚",
+                "Seguro médico de viaje 🏥"
+            ],
+            "dates_info": "Convocatoria anual: Abre entre Noviembre y Diciembre de cada año",
+            "support_ai": [
+                "Estructuración de ensayo de liderazgo y compromiso social",
+                "Preparación de entrevista presencial o virtual con la Embajada",
+                "Certificación de liderazgo comunitario"
+            ],
+            "facebook_url": "https://www.facebook.com/bolivia.usembassy",
+            "instagram_url": "https://www.instagram.com/usembassybolivia",
+            "youtube_url": "https://www.youtube.com/@usembassybolivia",
+            "video_url": "https://www.youtube.com/watch?v=susi-usa",
+            "image_url": "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80",
+            "is_demo": False,
+            "ideal_profile": [
+                {"emoji": "🇺🇸", "title": "Líderes 18-25 Años", "tags": ["Estudiantes universitarios", "5 a 6 semanas"]},
+                {"emoji": "🏛️", "title": "Inmersión en EE.UU.", "tags": ["Seminarios académicos", "Cultura y Sociedad"]},
+                {"emoji": "✈️", "title": "100% Financiado", "tags": ["Vuelos", "Hospedaje", "Comida"]}
+            ],
+            "testimonials": [
+                {"name": "Bruno Paredes", "country": "🇧🇴 Bolivia", "year": "2023", "university": "Amherst College EE.UU.", "program": "SUSI Fellow", "quote": "SUSI es una experiencia de inmersión cultural de 5 semanas que cambia tu forma de ver el liderazgo."}
+            ],
+            "faq": [
+                {"question": "¿Se necesita inglés fluido?", "answer": "Sí, para la mayoría de los programas. Existen algunas ramas específicas de liderazgo social en español."},
+                {"question": "¿Cuánto dura la estancia en EE.UU.?", "answer": "Dura entre 5 y 6 semanas intensivas durante las vacaciones universitarias."}]
+        },
+        {
+            "title": "Becas de la OEA - Cursos de Desarrollo Profesional",
+            "slug": "oea-cursos-desarrollo-beca",
+            "type": "scholarship",
+            "organization": "Organización de los Estados Americanos (OEA / ONE)",
+            "organization_name": "OEA",
+            "country": "Américas (Modalidad Presencial y Online)",
+            "city": "Washington D.C. / Varias ciudades de LATAM",
+            "institution": "Instituciones Miembros de la OEA",
+            "level": "Capacitación / Cursos Cortos",
+            "funding_type": "Parcial o Total",
+            "area": "Gobernabilidad, Educación, Ciencia, Sostenibilidad, TICs",
+            "language": "Español / Inglés",
+            "duration": "1 semana a 3 meses",
+            "deadline": "2026-10-31",
+            "official_url": "https://www.oas.org/es/becas/desarrollo_profesional.asp",
+            "short_description": "Cursos técnicos y de actualización profesional de 1 semana a 3 meses financiados por la OEA en modalidad presencial y virtual.",
+            "description": "Cursos impartidos en modalidad presencial o virtual por instituciones de excelencia de los países miembros de la OEA sobre temas de gobernabilidad, educación, ciencia y sostenibilidad.\n\nLa postulación se realiza a través de la oficina de enlace nacional en Bolivia (ONE). Ofrece financiamiento parcial o total según la convocatoria del curso.",
+            "eligibility": "Ciudadanos bolivianos graduados universitarios o técnicos con experiencia laboral relevante en el área del curso.",
+            "benefits": "Exención de matrícula, material del curso y, en modalidades presenciales, alojamiento y pasajes según el convenio.",
+            "slots": 25,
+            "status": "approved",
+            "activities": [
+                "Cursos cortos intensivos presenciales o virtuales 💻",
+                "Capacitación en gobernabilidad, sostenibilidad y tecnología 📊",
+                "Certificación oficial emitida por la OEA e instituciones socias 📜"
+            ],
+            "requirements": [
+                "Ciudadanía boliviana",
+                "Título universitario o técnico relevante",
+                "Estar trabajando en un área afín al curso",
+                "Tramitación a través de la Oficina Nacional de Enlace (ONE Bolivia)"
+            ],
+            "benefits_json": [
+                "100% de beca en matrícula del curso 💸",
+                "Modalidades virtuales de alta flexibilidad 💻",
+                "Certificado internacional OEA 📜"
+            ],
+            "dates_info": "Convocatorias recurrentes abiertas durante todo el año",
+            "support_ai": [
+                "Filtrado de convocatorias abiertas del catálogo OEA",
+                "Redacción de Justificación Profesional",
+                "Apoyo en trámites con la Oficina Nacional de Enlace (ONE)"
+            ],
+            "facebook_url": "https://www.facebook.com/OEAoficial",
+            "instagram_url": "https://www.instagram.com/oea_oficial",
+            "youtube_url": "https://www.youtube.com/@OEAoficial",
+            "video_url": "https://www.youtube.com/watch?v=oea-cursos",
+            "image_url": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80",
+            "is_demo": False,
+            "ideal_profile": [
+                {"emoji": "🌎", "title": "Cursos Cortos OEA", "tags": ["1 semana a 3 meses", "Presencial u Online"]},
+                {"emoji": "💻", "title": "Actualización Profesional", "tags": ["Gobernabilidad", "Tecnología", "Educación"]},
+                {"emoji": "📜", "title": "Certificación Oficial", "tags": ["Respaldo OEA", "Elegible Bolivia"]}
+            ],
+            "testimonials": [
+                {"name": "Lic. Gonzalo Tapia", "country": "🇧🇴 Bolivia", "year": "2023", "university": "OEA Virtual", "program": "Curso de Gestión Pública", "quote": "Los cursos de la OEA son muy prácticos y te permiten capacitarte sin dejar de trabajar."}
+            ],
+            "faq": [
+                {"question": "¿Dónde se tramita la postulación en Bolivia?", "answer": "Se realiza a través de la Oficina Nacional de Enlace (ONE) en Bolivia."},
+                {"question": "¿Hay cursos virtuales?", "answer": "Sí, gran parte de la oferta de desarrollo profesional de la OEA se dicta en línea."}]
+        },
+        {
+            "title": "Becas de Excelencia del Politécnico de Milán",
+            "slug": "politecnico-milano-beca",
+            "type": "scholarship",
+            "organization": "Politecnico di Milano (POLIMI)",
+            "organization_name": "POLIMI Italia",
+            "country": "Italia",
+            "city": "Milán, Como, Lecco",
+            "institution": "Politecnico di Milano",
+            "level": "Maestría (Master of Science)",
+            "funding_type": "100% completa (Exención Matrícula + Estipendio)",
+            "area": "Ingeniería, Arquitectura, Diseño",
+            "language": "Inglés C1",
+            "duration": "2 años académicos",
+            "deadline": "2027-03-10",
+            "official_url": "https://www.polimi.it/en/international-prospective-students/",
+            "short_description": "Becas por mérito académico otorgadas por el Politecnico di Milano para maestrías en Ingeniería, Arquitectura y Diseño en Italia.",
+            "description": "El Politecnico di Milano ofrece becas por mérito académico a los estudiantes internacionales más talentosos admitidos en programas de Master of Science (Maestría).\n\nNo se requiere una aplicación separada; el comité de admisiones evalúa automáticamente a todos los candidatos admitidos. Cubre exención total de matrícula más un estipendio de entre €5,000 y €10,000 anuales.",
+            "eligibility": "Graduados en Ingeniería, Arquitectura o Diseño con un promedio académico sobresaliente y carta de admisión al POLIMI.",
+            "benefits": "Exención 100% de tasas universitarias más estipendio anual de manutención (entre 5.000€ y 10.000€) y alojamiento en residencia.",
+            "slots": 15,
+            "status": "approved",
+            "activities": [
+                "Maestría de 2 años en el Politécnico de Milán 🇮🇹",
+                "Proyectos en laboratorios de diseño e ingeniería italianos 🔬",
+                "Conexión directa con la industria tecnológica y de diseño europea 🤝"
+            ],
+            "requirements": [
+                "Título universitario en Ingeniería, Arquitectura o Diseño",
+                "Promedio académico sobresaliente en la licenciatura",
+                "Certificación de inglés (TOEFL/IELTS)",
+                "Portafolio de proyectos (obligatorio para Arquitectura y Diseño)"
+            ],
+            "benefits_json": [
+                "Exención 100% de matrícula universitaria (aprox 3.900€/año) 💸",
+                "Estipendio económico de 5.000€ a 10.000€ anuales 💰",
+                "Alojamiento en residencia universitaria de Milán 🏠"
+            ],
+            "dates_info": "Convocatoria anual: Evaluación automática de solicitudes cerradas en Marzo",
+            "support_ai": [
+                "Revisión de portafolio de Arquitectura / Diseño",
+                "Traducción y formato de expediente académico para Italia",
+                "Guía de aplicación en el portal de admisiones POLIMI"
+            ],
+            "facebook_url": "https://www.facebook.com/polimi",
+            "instagram_url": "https://www.instagram.com/polimi",
+            "youtube_url": "https://www.youtube.com/@polimi",
+            "video_url": "https://www.youtube.com/watch?v=polimi-milan",
+            "image_url": "https://images.unsplash.com/photo-1513581166391-887a96ddeafd?w=800&q=80",
+            "is_demo": False,
+            "ideal_profile": [
+                {"emoji": "🇮🇹", "title": "Politécnico de Milán", "tags": ["Top 1 en Italia", "Ingeniería y Diseño"]},
+                {"emoji": "📊", "title": "Evaluación Automática", "tags": ["Por mérito", "Sin formulario extra"]},
+                {"emoji": "💶", "title": "Exención + 10.000€/año", "tags": ["Matrícula libre", "Estipendio"]}
+            ],
+            "testimonials": [
+                {"name": "Arq. Mateo Vaca", "country": "🇧🇴 Bolivia", "year": "2023", "university": "Politecnico di Milano", "program": "MSc Architecture and Urban Design", "quote": "Milán es la capital del diseño mundial y la beca de excelencia del POLIMI te premia por tu promedio."}
+            ],
+            "faq": [
+                {"question": "¿Debo llenar un formulario separado para la beca del POLIMI?", "answer": "No. El comité evalúa automáticamente a todos los postulantes admitidos a la maestría."},
+                {"question": "¿En qué idioma se imparten las maestrías?", "answer": "La gran mayoría de las maestrías internacionales del POLIMI se dictan totalmente en inglés."}]
         }
     ]
 
