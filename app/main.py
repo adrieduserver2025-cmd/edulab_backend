@@ -240,10 +240,82 @@ async def seed_programs_db():
             "support_ai": ["Redacción de carta de interés", "Revisión de CV internacional"],
             "facebook_url": "https://www.facebook.com/unvolunteers",
             "instagram_url": "https://www.instagram.com/unvolunteers/",
-            "youtube_url": "https://www.youtube.com/@UNVolunteersVideo",
-            "video_url": "https://www.youtube.com/watch?v=onu-video",
-            "image_url": "/assets/images/un_volunteering.jpg",
-            "is_demo": True
+            "youtube_url": "https://www.youtube.com/user/unv",
+            "video_url": "https://www.youtube.com/watch?v=acsOP8sBmBY",
+            "image_url": "https://images.unsplash.com/photo-1532629345422-7515f3d16bb0?w=800&q=80",
+            "is_demo": False,
+            "testimonials": [
+                {"name": "Camila Rodríguez", "country": "🇧🇴 Bolivia", "year": "2023", "university": "UNV Kenia", "program": "UN Youth Volunteer", "quote": "Trabajar en las agencias de la ONU en el terreno te da una perspectiva única del impacto internacional."}
+            ],
+            "faq": [
+                {"question": "¿Cuál es la edad elegible para UN Youth Volunteers?", "answer": "El programa está dirigido a jóvenes de entre 18 y 26 años."},
+                {"question": "¿Qué gastos cubre la ONU?", "answer": "Cubre estipendio mensual de subsistencia, viajes internacionales, seguro médico y subsidio de reasentamiento."}
+            ]
+        },
+        {
+            "title": "Fellows América Solidaria",
+            "slug": "america-solidaria-voluntariado",
+            "type": "volunteering",
+            "organization": "Fundación América Solidaria",
+            "organization_name": "América Solidaria",
+            "country": "Países de las Américas (Haití, Chile, Colombia, Perú, Guatemala)",
+            "city": "Varias sedes en Latinoamérica",
+            "institution": "Fundación América Solidaria",
+            "level": "Voluntariado Profesional & Desarrollo Comunitario",
+            "funding_type": "100% completa (Vivienda + Alimentación + Pasajes + Estipendio)",
+            "area": "Psicología, Educación, Trabajo Social, Ingeniería, Salud",
+            "language": "Español",
+            "duration": "1 año (Tiempo completo)",
+            "deadline": "2026-10-31",
+            "official_url": "https://americasolidaria.org/",
+            "eligibility": "Profesionales bolivianos menores de 35 años (psicólogos, profesores, trabajadores sociales, ingenieros) con experiencia previa en voluntariado y disponibilidad de 1 año.",
+            "benefits": "Pasajes aéreos, seguro médico, vivienda, alimentación y estipendio básico para gastos personales.",
+            "slots": 20,
+            "slug": "america-solidaria-voluntariado",
+            "organization_name": "América Solidaria",
+            "status": "approved",
+            "short_description": "Programa de excelencia que busca profesionales para trabajar durante 1 año en proyectos de superación de la pobreza en las Américas.",
+            "description": "Programa de excelencia que busca profesionales para trabajar durante un año en proyectos de superación de la pobreza en comunidades vulnerables del continente americano.\n\nTrabajamos en tres ejes concretos: Yo puedo (autoestima y liderazgo), Yo soy parte (sentido de pertenencia) y Yo actúo (habilidades de proyectos de impacto social).\n\nCubre pasajes aéreos, seguro médico, vivienda, alimentación y estipendio básico para gastos personales.",
+            "activities": [
+                "Proyectos comunitarios en superación de pobreza en las Américas 🌎",
+                "Talleres formativos en ejes Yo Puedo, Yo Soy Parte y Yo Actúo 🧠",
+                "Inmersión profesional de tiempo completo por 1 año 🤝"
+            ],
+            "requirements": [
+                "Título profesional universitario",
+                "Tener menos de 35 años al momento de postular",
+                "Experiencia previa en voluntariado social",
+                "Disponibilidad de tiempo completo por un año"
+            ],
+            "benefits_json": [
+                "Pasajes aéreos internacionales ida y vuelta ✈️",
+                "Vivienda y alimentación cubiertas 🏠",
+                "Seguro médico integral 🏥",
+                "Estipendio básico para gastos personales 💰"
+            ],
+            "dates_info": "Convocatorias anuales: Generalmente dos procesos en Abril y Octubre",
+            "support_ai": [
+                "Evaluación de perfil profesional para América Solidaria",
+                "Redacción de Carta de Experiencia en Voluntariado",
+                "Simulador de entrevista institucional"
+            ],
+            "facebook_url": "https://www.facebook.com/americasolidaria",
+            "instagram_url": "https://www.instagram.com/americasolidaria/?hl=es",
+            "youtube_url": "https://www.youtube.com/@Am%C3%A9ricaSolidariaChile",
+            "video_url": "https://www.youtube.com/watch?v=c3tv6T5S5gY",
+            "image_url": "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=800&q=80",
+            "is_demo": False,
+            "ideal_profile": [
+                {"emoji": "🌎", "title": "Profesionales <35 Años", "tags": ["Psicología", "Educación", "Trabajo Social", "Ingeniería"]},
+                {"emoji": "🏠", "title": "Superación de Pobreza", "tags": ["1 año tiempo completo", "Américas"]},
+                {"emoji": "🤝", "title": "Financiación Total", "tags": ["Vivienda", "Alimentación", "Pasajes", "Estipendio"]}
+            ],
+            "testimonials": [
+                {"name": "Lic. Matías Quiroga", "country": "🇧🇴 Bolivia", "year": "2023", "university": "América Solidaria Chile", "program": "Fellow América Solidaria", "quote": "Dedicar un año a construir con las comunidades en vulnerabilidad te forma profesional y humanamente."}
+            ],
+            "faq": [
+                {"question": "¿Qué profesiones son más requeridas?", "answer": "Psicólogos, trabajadores sociales, profesores de educación primaria/secundaria, ingenieros y profesionales de salud."},
+                {"question": "¿Qué cubre el programa?", "answer": "Cubre pasajes aéreos, vivienda, alimentación, seguro médico y estipendio para gastos personales."}]
         },
         {
             "title": "Beca Fulbright",
