@@ -722,10 +722,10 @@ async def seed_programs_db():
                 "Redacción de Carta de Experiencia en Voluntariado",
                 "Simulador de entrevista institucional"
             ],
-            "facebook_url": "https://www.facebook.com/americasolidaria",
+            "facebook_url": "https://www.facebook.com/americasolidariaperu",
             "instagram_url": "https://www.instagram.com/americasolidaria/?hl=es",
-            "youtube_url": "https://www.youtube.com/@Am%C3%A9ricaSolidariaChile",
-            "video_url": "https://www.youtube.com/watch?v=c3tv6T5S5gY",
+            "youtube_url": "https://www.youtube.com/watch?v=c3tv6T5S5gY",
+            "video_url": "https://www.youtube.com/watch?v=tHenaT5aFHI",
             "image_url": "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=800&q=80",
             "is_demo": False,
             "ideal_profile": [
