@@ -57,6 +57,10 @@ class Settings(BaseSettings):
             return v.replace("postgresql+psycopg2://", "postgresql+asyncpg://", 1)
         if v.startswith("postgresql://"):
             return v.replace("postgresql://", "postgresql+asyncpg://", 1)
+        if v.startswith("mysql+pymysql://"):
+            return v.replace("mysql+pymysql://", "mysql+aiomysql://", 1)
+        if v.startswith("mysql://"):
+            return v.replace("mysql://", "mysql+aiomysql://", 1)
         return v
 
 settings = Settings()

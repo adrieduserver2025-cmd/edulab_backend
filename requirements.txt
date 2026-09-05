@@ -2,7 +2,9 @@ alembic==1.18.4
 annotated-doc==0.0.4
 annotated-types==0.7.0
 anyio==4.13.0
+aiomysql==0.3.2
 asyncpg==0.31.0
+pymysql==1.2.0
 CacheControl==0.14.4
 certifi==2026.5.20
 cffi==2.0.0
