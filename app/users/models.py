@@ -10,7 +10,7 @@ class User(Base):
     firebase_uid = Column(String(255), unique=True, nullable=False)
     email = Column(String(255), unique=True, nullable=False)
     full_name = Column(String(255))
-    photo_url = Column(String)
+    photo_url = Column(String(500))
     role = Column(String(50), default="student")
     status = Column(String(50), default="active")
     origin = Column(String(50), default="external_user", nullable=False)
