@@ -16,7 +16,9 @@ engine = create_async_engine(
     echo=False,  # Set to True for SQL queries logging in development
     connect_args=connect_args,
     pool_pre_ping=True,  # Automatically reconnect if remote MySQL connection timed out
-    pool_recycle=300,    # Recycle connections every 5 minutes before Hostinger timeout
+    pool_recycle=120,    # Recycle connections every 2 minutes before Hostinger timeout
+    pool_size=10,        # Keep 10 active connections always warm in the pool
+    max_overflow=20,     # Allow up to 30 concurrent active connections under load
     future=True
 )
 

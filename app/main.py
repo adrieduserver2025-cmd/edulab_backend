@@ -1,3 +1,4 @@
+import asyncio
 import logging
 import datetime
 from contextlib import asynccontextmanager
@@ -20,6 +21,22 @@ from app.organizations.models import Organization
 # Setup Logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("uvicorn.error")
+
+async def db_keepalive_heartbeat():
+    """
+    Background heartbeat task that sends a 1-byte ping (SELECT 1) every 45 seconds
+    to keep Hostinger MySQL database connections 100% active, warm and alive 24/7.
+    """
+    from sqlalchemy import text
+    while True:
+        try:
+            await asyncio.sleep(45)
+            async with engine.connect() as conn:
+                await conn.execute(text("SELECT 1"))
+        except asyncio.CancelledError:
+            break
+        except Exception as e:
+            logger.debug(f"DB heartbeat ping status: {e}")
 
 async def seed_programs_db():
     from app.database.session import SessionLocal
@@ -2300,8 +2317,13 @@ async def lifespan(app: FastAPI):
             logger.error(f"❌ Failed to auto-initialize database tables: {e}")
             logger.warning("Make sure PostgreSQL is running, or DATABASE_URL is configured correctly.")
 
+    # Launch background DB keepalive heartbeat task
+    heartbeat_task = asyncio.create_task(db_keepalive_heartbeat())
+    logger.info("💓 Database Keep-Alive Heartbeat service started.")
+
     yield
     # Shutdown actions (if any)
+    heartbeat_task.cancel()
     logger.info("Stopping EDULAB Application Server...")
 
 app = FastAPI(
